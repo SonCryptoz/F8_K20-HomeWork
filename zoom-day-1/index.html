@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoom-Day-1</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Prism.js to highlight code blocks -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <div class="blog-container">
+            <!-- Article -->
+            <article class="article-container">
+                <h1>
+                    ES2025 JavaScript: Patterns và Libraries Hot Nhất Cho
+                    Developer Việt 2026
+                </h1>
+                <!-- Blog Header -->
+                <div class="blog-header">
+                    <div class="blog-user">
+                        <a href="#"
+                            ><img
+                                src="./img/img-user-avt.png"
+                                alt="blog user avatar"
+                            />
+                        </a>
+                        <div class="blog-user-info">
+                            <a href="#">
+                                <span>Ếch Trendy</span>
+                                <svg
+                                    data-prefix="fas"
+                                    data-icon="circle-check"
+                                    class="svg-inline--fa fa-circle-check UserName-module__icon___w3fJm"
+                                    role="img"
+                                    viewBox="0 0 512 512"
+                                    aria-hidden="true"
+                                    style="font-size: 1.2rem"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zM374 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8L379.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <p>17 ngày trước <span>·</span> 6 phút đọc</p>
+                        </div>
+                    </div>
+                    <div class="blog-actions">
+                        <div class="bookmark-btn">
+                            <svg
+                                data-prefix="far"
+                                data-icon="bookmark"
+                                class="svg-inline--fa fa-bookmark"
+                                role="img"
+                                viewBox="0 0 384 512"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 417.1c0 25.6-28.5 40.8-49.8 26.6L192 412.8 49.8 507.7C28.5 521.9 0 506.6 0 481.1L0 64zM64 48c-8.8 0-16 7.2-16 16l0 387.2 117.4-78.2c16.1-10.7 37.1-10.7 53.2 0L336 451.2 336 64c0-8.8-7.2-16-16-16L64 48z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="option-btn">
+                            <svg
+                                data-prefix="fas"
+                                data-icon="ellipsis"
+                                class="svg-inline--fa fa-ellipsis"
+                                role="img"
+                                viewBox="0 0 448 512"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M0 256a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm168 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm224-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Content -->
+                <div class="blog-content">
+                    <h2>
+                        <a
+                            href="#es2025-ra-mat-cai-gi-that-su-vao-spec"
+                            id="es2025-ra-mat-cai-gi-that-su-vao-spec"
+                            >ES2025 ra mắt - cái gì thật sự vào spec?</a
+                        >
+                    </h2>
+                    <p>
+                        Tháng 6/2025, TC39 chính thức công bố ECMAScript 2025
+                        (ES16). Nếu bạn hay follow Twitter/X dev community, chắc
+                        nghe nhiều về pipeline operator hay Temporal API - nhưng
+                        cả hai vẫn chưa vào spec. Đừng để bị nhầm.
+                    </p>
+                    <p>
+                        Cái <strong>thật sự</strong> vào ES2025 gồm 6 nhóm tính
+                        năng:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Iterator Helpers</strong> - global
+                            <code>Iterator</code> object với <code>map</code>,
+                            <code>filter</code>, <code>take</code>,
+                            <code>drop</code>
+                        </li>
+                        <li>
+                            <strong>Set Methods</strong> - <code>union()</code>,
+                            <code>intersection()</code>,
+                            <code>difference()</code>,
+                            <code>symmetricDifference()</code>
+                        </li>
+                        <li>
+                            <strong>Promise.try()</strong> - bắt cả sync lẫn
+                            async errors trong một chain
+                        </li>
+                        <li>
+                            <strong>RegExp improvements</strong> - flag
+                            <code>/v</code>, <code>RegExp.escape()</code>,
+                            duplicate named groups
+                        </li>
+                        <li>
+                            <strong>Import Attributes</strong> -
+                            <code
+                                >import data from "./data.json" with { type:
+                                "json" }
+                            </code>
+                        </li>
+                        <li>
+                            <strong>Float16Array</strong> - typed array 16-bit
+                            cho memory-sensitive workloads
+                        </li>
+                    </ul>
+                    <p>
+                        <img
+                            src="./img/img-content-blog-1.png"
+                            alt="blog content image"
+                        />
+                        <em
+                            >ES2025 tập trung vào iterator, set, và async -
+                            không phải pipeline operator như nhiều bài viết nhầm
+                        </em>
+                    </p>
+                    <p>
+                        Node.js 22+ và các browser Chrome/Firefox/Safari release
+                        sau tháng 6/2025 đã support native. Không cần polyfill
+                        cho production nếu bạn target môi trường đủ mới.
+                    </p>
+                    <p>
+                        Pipeline operator (<code>&#9655</code>) và Temporal API? Vẫn
+                        đang ở Stage 2-3. Dùng Luxon hoặc date-fns cho date/time
+                        là lựa chọn thực tế nhất hiện tại.
+                    </p>
+                    <hr />
+                    <h2
+                        id="iterator-helpers-va-set-methods-dung-that-trong-du-an-the-nao"
+                    >
+                        <a
+                            href="#iterator-helpers-va-set-methods-dung-that-trong-du-an-the-nao"
+                        >
+                            Iterator Helpers và Set Methods - dùng thật trong dự
+                            án thế nào?
+                        </a>
+                    </h2>
+                    <p>
+                        Hai tính năng này mình thấy practical nhất trong ES2025
+                        cho daily work.
+                    </p>
+                    <p>
+                        <strong>Iterator Helpers</strong> giải quyết bài toán
+                        bạn từng phải import lodash chỉ để
+                        <code>map + filter + slice</code> một mảng lớn. Bây giờ
+                        không cần nữa:
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">// Trước ES2025 - load cả mảng vào memory
+const result = apiData
+  .filter(item =&gt; item.active)
+  .map(item =&gt; item.name)
+  .slice(0, 100);
+
+// ES2025 - lazy evaluation, chỉ xử lý đến khi đủ 100 item
+const result = Iterator.from(apiData)
+  .filter(item =&gt; item.active)
+  .map(item =&gt; item.name)
+  .take(100)
+  .toArray();
+</code></pre>
+                    <p>
+                        Khác biệt quan trọng: <code>Iterator.from()</code>
+                        <strong>lazy</strong> - với mảng 10.000 item nhưng chỉ
+                        cần 100 kết quả đầu, nó không xử lý 9.900 item còn lại.
+                        Lodash chain cũng làm được điều này, nhưng giờ là
+                        native.
+                    </p>
+                    <p>
+                        <img
+                            src="./img/img-content-blog-2.png"
+                            alt="blog content image"
+                        />
+                        <em
+                            >Lazy evaluation: chỉ xử lý đúng số item cần thiết,
+                            tiết kiệm CPU và memory đáng kể</em
+                        >
+                    </p>
+                    <p>
+                        <strong>Set Methods</strong> thì đặc biệt hữu ích cho
+                        permission systems hoặc dedup realtime data:
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">const userRoles = new Set([&apos;admin&apos;, &apos;editor&apos;]);
+const requiredRoles = new Set([&apos;editor&apos;, &apos;viewer&apos;]);
+
+// Kiểm tra overlap
+const hasAccess = !userRoles.intersection(requiredRoles).size === 0;
+
+// Chat app: merge messages từ 2 nguồn, không trùng
+const allMessages = socketMessages.union(cachedMessages);
+
+// Diff để biết message mới
+const newMessages = socketMessages.difference(cachedMessages);
+</code></pre>
+                    <p>
+                        Trước đây bạn phải tự viết
+                        <code>[...setA].filter(x => setB.has(x))</code>. Dài,
+                        khó đọc, dễ bug. Set methods native clean hơn nhiều và
+                        chain được với nhau.
+                    </p>
+                    <hr />
+                    <h2 id="promisetry-va-async-await-patterns-nang-cao">
+                        <a href="#promisetry-va-async-await-patterns-nang-cao"
+                            >Promise.try() và async/await patterns nâng cao</a
+                        >
+                    </h2>
+                    <p>
+                        Đây là tính năng mình mong nhất trong ES2025. Vấn đề cũ:
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">// Bug tiềm ẩn: nếu getUser() throw sync, lỗi không bị catch!
+async function loadProfile(id) {
+  return getUser(id) // sync function, throw không bị catch bởi .catch()
+    .then(user =&gt; fetchDetails(user));
+}
+</code></pre>
+                    <p><code>Promise.try()</code> fix đúng điểm này:</p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">// Promise.try wrap cả sync throw vào promise chain
+Promise.try(() =&gt; getUser(id))
+  .then(user =&gt; fetchDetails(user))
+  .catch(err =&gt; handleError(err)); // bắt được cả sync lẫn async error
+</code></pre>
+                    <p>
+                        <strong
+                            >Pattern mạnh hơn: kết hợp với async generators cho
+                            streaming data
+                        </strong>
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">async function* streamDashboardData(endpoint) {
+  const response = await Promise.try(() =&gt; fetch(endpoint));
+  const reader = response.body.getReader();
+  
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    
+    // Dùng Iterator Helpers để transform ngay trên stream
+    yield* Iterator.from([value])
+      .map(chunk =&gt; JSON.parse(new TextDecoder().decode(chunk)))
+      .filter(data =&gt; data.type === &apos;update&apos;);
+  }
+}
+
+// Consume trong component
+for await (const update of streamDashboardData(&apos;/api/stream&apos;)) {
+  updateUI(update);
+}
+</code></pre>
+                    <p>
+                        <img
+                            src="./img/img-content-blog-3.png"
+                            alt="blog content image"
+                        />
+                        <em
+                            >Promise.try + async generator = xử lý stream data
+                            không bị miss error ở bất kỳ điểm nào
+                        </em>
+                    </p>
+                    <p>
+                        <strong> Top-level await</strong> (ES2022 nhưng hay dùng
+                        chung với ES2025 patterns) cũng clean hơn khi kết hợp
+                        Set ops:
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">// module.js - init một lần, share across module
+const initialPermissions = new Set(await fetchUserPermissions());
+const cachedPermissions = new Set(JSON.parse(localStorage.getItem(&apos;perms&apos;) ?? &apos;[]&apos;));
+
+// Merge, loại bỏ duplicate
+export const permissions = initialPermissions.union(cachedPermissions);
+</code></pre>
+                    <p>
+                        Nếu bạn muốn nền tảng JavaScript vững để apply những
+                        patterns này ngay, khóa
+                        <a href="#" style="color: #f05123">JavaScript Pro</a>
+                        cover sâu về async/await, closures, và cách JS engine
+                        thực sự hoạt động - đủ để đọc ES2025 spec mà hiểu rõ tại
+                        sao.
+                    </p>
+                    <hr />
+                    <h2 id="rxjs-vs-zustand-chon-gi-cho-realtime-web-app">
+                        <a href="#rxjs-vs-zustand-chon-gi-cho-realtime-web-app"
+                            >RxJS vs Zustand - chọn gì cho realtime web app?</a
+                        >
+                    </h2>
+                    <p>
+                        Mình sẽ không nói "cái nào tốt hơn" vì câu trả lời phụ
+                        thuộc vào loại app bạn đang build.
+                    </p>
+                    <p>
+                        <strong>RxJS</strong> (<a
+                            href="#"
+                            style="color: #f05123"
+                            >RxJS docs</a
+                        >) là reactive programming library với Observable - phù
+                        hợp khi data flow của bạn phức tạp, nhiều nguồn, cần
+                        backpressure hay timing control:
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">import { fromEvent, Subject } from &apos;rxjs&apos;;
+import { debounceTime, scan, filter } from &apos;rxjs/operators&apos;;
+
+const socket = new WebSocket(&apos;wss://api.example.com/live&apos;);
+
+// Stream WebSocket messages, debounce 300ms, accumulate
+const liveData$ = fromEvent(socket, &apos;message&apos;).pipe(
+  debounceTime(300),
+  filter(event =&gt; event.data !== &apos;ping&apos;),
+  scan((acc, event) =&gt; [...acc.slice(-99), JSON.parse(event.data)], []),
+);
+
+liveData$.subscribe(messages =&gt; updateDashboard(messages));
+</code></pre>
+                    <p>
+                        <strong>Zustand</strong> (<a
+                            href="#"
+                            style="color: #f05123"
+                            >Zustand GitHub</a
+                        >) đi theo hướng ngược lại - minimal, hooks-based, không
+                        boilerplate:
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">import { create } from &apos;zustand&apos;;
+
+const useChatStore = create((set, get) =&gt; ({
+  messages: [],
+  connected: false,
+  
+  // ES2025 Promise.try trong action
+  connectSocket: async (url) =&gt; {
+    await Promise.try(async () =&gt; {
+      const ws = new WebSocket(url);
+      set({ connected: true });
+      
+      ws.onmessage = (e) =&gt; set(state =&gt; ({
+        messages: [...state.messages, JSON.parse(e.data)]
+      }));
+    });
+  },
+}));
+
+// Trong component
+function ChatApp() {
+  const { messages, connectSocket } = useChatStore();
+  // ...
+}
+</code></pre>
+                    <p>
+                        <img
+                            src="./img/img-content-blog-4.png"
+                            alt="blog content image"
+                        />
+                        <em
+                            >RxJS cho stream phức tạp, Zustand cho React app
+                            state - chọn đúng tool cho đúng bài toán</em
+                        >
+                    </p>
+                    <p>Bảng so sánh thực tế:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tiêu chí</th>
+                                <th>RxJS v8.x</th>
+                                <th>Zustand v5.x</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bundle size</td>
+                                <td>~50KB</td>
+                                <td>&lt;2KB</td>
+                            </tr>
+                            <tr>
+                                <td>Learning Curve</td>
+                                <td>Cao (marble diagrams)</td>
+                                <td>Thấp</td>
+                            </tr>
+                            <tr>
+                                <td>Phù hợp cho</td>
+                                <td>Multiplayer, live feed, complex streams</td>
+                                <td>React SPA, UI state</td>
+                            </tr>
+                            <tr>
+                                <td>ES2025 synergy</td>
+                                <td><code>Iterator.from(observable)</code></td>
+                                <td><code>Promise.try</code> trong actions</td>
+                            </tr>
+                            <tr>
+                                <td>TypeScript</td>
+                                <td>Tốt</td>
+                                <td>Rất tốt (generics cải thiện v5+)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Cho hầu hết React app Việt Nam (dashboard, e-commerce,
+                        admin panel) - Zustand là đủ và ít đau đầu hơn. RxJS chỉ
+                        worth it khi bạn xây multiplayer game, collaborative
+                        editor, hoặc financial live feed cần control timing cực
+                        chính xác.
+                    </p>
+                    <p>
+                        Nếu bạn đang build với ReactJS và chưa rõ cách quản lý
+                        state từ cơ bản, khóa
+                        <a href="#" style="color: #f05123">
+                            Xây Dựng Website với ReactJS</a
+                        >
+                        sẽ giúp bạn hiểu đúng từ component state đến context
+                        trước khi nhảy vào Zustand.
+                    </p>
+                    <hr />
+                    <h2
+                        id="xay-realtime-dashboard-voi-es2025-zustand-vi-du-thuc-te"
+                    >
+                        <a
+                            href="#xay-realtime-dashboard-voi-es2025-zustand-vi-du-thuc-te"
+                            >Xây realtime dashboard với ES2025 + Zustand: ví dụ
+                            thực tế
+                        </a>
+                    </h2>
+                    <p>
+                        Mình sẽ ghép tất cả những gì đã nói vào một mini case
+                        study: realtime stock price dashboard nhận data qua
+                        WebSocket.
+                    </p>
+                    <p>
+                        Download file demo đầy đủ tại đây:
+                        <a href="#" style="color: #f05123"
+                            >Tải file demo Realtime Dashboard
+                        </a>
+                    </p>
+                    <p><strong>Kiến trúc:</strong></p>
+                    <pre
+                        class="language-text"
+                    ><code class="language-text">WebSocket server
+    ↓
+Zustand store (ES2025 Promise.try + Set dedup)
+    ↓
+Iterator Helpers (filter/transform)
+    ↓
+React components (subscribe minimal)
+</code></pre>
+                    <p>
+                        <strong>Store với ES2025 patterns:</strong>
+                    </p>
+                    <pre
+                        class="language-javascript"
+                    ><code class="language-javascript">import { create } from &apos;zustand&apos;;
+
+const useStockStore = create((set, get) =&gt; ({
+  prices: new Map(), // symbol -&gt; latest price
+  symbols: new Set(), // active symbols
+  
+  subscribeToSymbols: async (newSymbols) =&gt; {
+    const current = get().symbols;
+    // Set union - không duplicate
+    const updated = current.union(new Set(newSymbols));
+    set({ symbols: updated });
+    
+    // Promise.try bắt cả sync error từ WebSocket init
+    await Promise.try(async () =&gt; {
+      const ws = new WebSocket(`wss://api/stocks?symbols=${[...updated].join(&apos;,&apos;)}`);
+      
+      ws.onmessage = (e) =&gt; {
+        const { symbol, price } = JSON.parse(e.data);
+        set(state =&gt; ({
+          prices: new Map(state.prices).set(symbol, price)
+        }));
+      };
+    });
+  },
+  
+  // Iterator Helpers: lấy top 10 cổ phiếu tăng nhiều nhất
+  getTopGainers: (baseline) =&gt; {
+    return Iterator.from(get().prices.entries())
+      .filter(([, price]) =&gt; price &gt; (baseline.get(symbol) ?? 0))
+      .map(([symbol, price]) =&gt; ({ symbol, price }))
+      .take(10)
+      .toArray();
+  },
+}));
+</code></pre>
+                    <p>
+                        <img
+                            src="./img/img-content-blog-5.png"
+                            alt="blog content image"
+                        />
+                        <em
+                            >Zustand store kết hợp ES2025 Set union và Iterator
+                            Helpers - ít code hơn, dễ đọc hơn</em
+                        >
+                    </p>
+                    <p>Pattern này cho phép bạn:</p>
+                    <ul>
+                        <li>
+                            Không duplicate symbol khi user thêm subscription
+                            nhiều lần (Set.union)
+                        </li>
+                        <li>
+                            Không bị missed error khi WebSocket init fail sync
+                            (Promise.try)
+                        </li>
+                        <li>
+                            Chỉ xử lý đúng 10 item cần thiết từ hàng nghìn price
+                            entries (Iterator.take)
+                        </li>
+                    </ul>
+                    <p>Bạn đã có đủ building blocks. Bước tiếp:</p>
+                    <ol>
+                        <li>
+                            Cài Node.js 22+ hoặc bật Chrome mới nhất để test
+                            native (không cần polyfill)
+                        </li>
+                        <li>
+                            Thêm Zustand vào project React hiện tại, migrate một
+                            slice state nhỏ trước
+                        </li>
+                        <li>
+                            Thử <code>Iterator.from()</code> thay lodash chain
+                            trong một data transformation function
+                        </li>
+                    </ol>
+                    <p>
+                        Gặp vướng mắc ở phần nào, drop comment xuống dưới - mình
+                        đọc hết.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Blog bottom -->
+            <div class="blog-bottom">
+                <!-- Reaction Buttons -->
+                <div class="reaction-btn">
+                    <div class="reaction-btn-heart">
+                        <svg
+                            data-prefix="far"
+                            data-icon="heart"
+                            class="svg-inline--fa fa-heart"
+                            role="img"
+                            viewBox="0 0 512 512"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M378.9 80c-27.3 0-53 13.1-69 35.2l-34.4 47.6c-4.5 6.2-11.7 9.9-19.4 9.9s-14.9-3.7-19.4-9.9l-34.4-47.6c-16-22.1-41.7-35.2-69-35.2-47 0-85.1 38.1-85.1 85.1 0 49.9 32 98.4 68.1 142.3 41.1 50 91.4 94 125.9 120.3 3.2 2.4 7.9 4.2 14 4.2s10.8-1.8 14-4.2c34.5-26.3 84.8-70.4 125.9-120.3 36.2-43.9 68.1-92.4 68.1-142.3 0-47-38.1-85.1-85.1-85.1zM271 87.1c25-34.6 65.2-55.1 107.9-55.1 73.5 0 133.1 59.6 133.1 133.1 0 68.6-42.9 128.9-79.1 172.8-44.1 53.6-97.3 100.1-133.8 127.9-12.3 9.4-27.5 14.1-43.1 14.1s-30.8-4.7-43.1-14.1C176.4 438 123.2 391.5 79.1 338 42.9 294.1 0 233.7 0 165.1 0 91.6 59.6 32 133.1 32 175.8 32 216 52.5 241 87.1l15 20.7 15-20.7z"
+                            ></path>
+                        </svg>
+                        <span>1</span>
+                    </div>
+                    <div class="reaction-btn-comment">
+                        <svg
+                            data-prefix="far"
+                            data-icon="comment"
+                            class="svg-inline--fa fa-comment"
+                            role="img"
+                            viewBox="0 0 512 512"
+                            aria-hidden="true"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M51.9 384.9C19.3 344.6 0 294.4 0 240 0 107.5 114.6 0 256 0S512 107.5 512 240 397.4 480 256 480c-36.5 0-71.2-7.2-102.6-20L37 509.9c-3.7 1.6-7.5 2.1-11.5 2.1-14.1 0-25.5-11.4-25.5-25.5 0-4.3 1.1-8.5 3.1-12.2l48.8-89.4zm37.3-30.2c12.2 15.1 14.1 36.1 4.8 53.2l-18 33.1 58.5-25.1c11.8-5.1 25.2-5.2 37.1-.3 25.7 10.5 54.2 16.4 84.3 16.4 117.8 0 208-88.8 208-192S373.8 48 256 48 48 136.8 48 240c0 42.8 15.1 82.4 41.2 114.7z"
+                            ></path>
+                        </svg>
+                        <span>2</span>
+                    </div>
+                </div>
+
+                <!-- Tags Stack -->
+                <div class="tags-stack">
+                    <a href="#"> Javascript </a>
+                    <a href="#"> RxJS </a>
+                    <a href="#"> ES2025 </a>
+                    <a href="#"> Zustand </a>
+                    <a href="#"> async/await </a>
+                </div>
+
+                <!-- Posts with same author -->
+                <div class="posts-with-same-author">
+                    <h3>Bài đăng cùng tác giả</h3>
+                    <ul>
+                        <li>
+                            <a href="#"
+                                >Thiết Kế Web 2026: AI Cá Nhân Hóa & 3D Tương
+                                Tác Thực Chiến</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                >AI Code Thay Developer? Sự Thật Từ Copilot Đến
+                                Chatbot</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Google Core Feb 2026: Discover Ưu Tiên Site
+                                Việt Thế Nào?</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                >PWA 2026: App Web Nhanh Như Native, Chi Phí Chỉ
+                                1/3</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Motion UI giữ chân user: CSS/GSAP thực chiến
+                                2026</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <hr />
+
+                <!-- Related Posts -->
+                <div class="related-posts">
+                    <h2>Bài viết nổi bật khác</h2>
+                    <div class="related-posts-list">
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-1.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>
+                                    Tổng hợp các sản phẩm của học viên tại F8
+                                </h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://files.f8.edu.vn/f8-prod/avatars/699286a5e7330.png"
+                                            alt=""
+                                        />
+                                        <span><strong>Sơn Đặng</strong></span>
+                                    </div>
+                                    <span>·</span>
+                                    <span>6 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-2.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>
+                                    [Phần 1] Tạo dự án ReactJS với Webpack và
+                                    Babel
+                                </h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://files.f8.edu.vn/f8-prod/avatars/699286a5e7330.png"
+                                            alt=""
+                                        />
+                                        <span><strong>Sơn Đặng</strong></span>
+                                    </div>
+                                    <span>·</span>
+                                    <span>12 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-3.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>Ký sự ngày thứ 25 học ở F8</h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://f8.edu.vn/assets/feedback-0-BFb1fhaR.jpg"
+                                            alt=""
+                                        />
+                                        <span><strong>Sơn Sơn</strong></span>
+                                    </div>
+                                    <span>·</span>
+                                    <span>1 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-4.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>
+                                    Các nguồn tài nguyên hữu ích cho 1 front-end
+                                    developer
+                                </h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://f8.edu.vn/assets/feedback-0-BFb1fhaR.jpg"
+                                            alt=""
+                                        />
+                                        <span
+                                            ><strong>Dương Vương</strong></span
+                                        >
+                                    </div>
+                                    <span>·</span>
+                                    <span>2 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-5.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>
+                                    Tips CSS: Gom nhóm các thuộc tính CSS sao
+                                    cho gọn, đẹp, và dễ bảo trì.
+                                </h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://f8.edu.vn/assets/feedback-0-BFb1fhaR.jpg"
+                                            alt=""
+                                        />
+                                        <span><strong>Cules Hưng</strong></span>
+                                    </div>
+                                    <span>·</span>
+                                    <span>4 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-6.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>
+                                    Các phím tắt thông dụng trong Visual Studio
+                                    Code (Windows)
+                                </h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://files.f8.edu.vn/f8-prod/user_avatars/74901/626aa252cdb22.jpg"
+                                            alt=""
+                                        />
+                                        <span
+                                            ><strong
+                                                >Trung Lê Thành</strong
+                                            ></span
+                                        >
+                                    </div>
+                                    <span>·</span>
+                                    <span>2 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-7.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>Giá trị của một Full-Stack Developer?</h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://f8.edu.vn/assets/feedback-0-BFb1fhaR.jpg"
+                                            alt=""
+                                        />
+                                        <span><strong>Pham Khang</strong></span>
+                                    </div>
+                                    <span>·</span>
+                                    <span>7 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-posts-list-card">
+                            <img
+                                src="./img/img-related-post-8.png"
+                                alt="related post image"
+                            />
+                            <div class="related-posts-list-title">
+                                <h4>
+                                    Bạn là sinh viên? bài blog này là dành cho
+                                    bạn [P2] 😎
+                                </h4>
+                                <div class="related-posts-list-card-meta">
+                                    <div>
+                                        <img
+                                            src="https://f8.edu.vn/assets/feedback-0-BFb1fhaR.jpg"
+                                            alt=""
+                                        />
+                                        <span><strong>H Name</strong></span>
+                                    </div>
+                                    <span>·</span>
+                                    <span>5 phút đọc</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Prism.js initialization -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    </body>
+</html>
