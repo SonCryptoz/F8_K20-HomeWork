@@ -18,6 +18,10 @@ body {
     line-height: 1.6;
 }
 
+.link-primary {
+    color: #f05123;
+}
+
 hr {
     margin: 40px 0;
     background-color: #ddd;
@@ -241,7 +245,7 @@ tbody tr td {
     background-color: #f7f7f7;
 }
 
-.related-posts-list-card:hover > .related-posts-list-title h4 {
+.related-posts-list-card:hover > .related-posts-list-title h3 {
     color: #f05123;
 }
 
@@ -260,7 +264,7 @@ tbody tr td {
     justify-content: center;
     gap: 8px;
 }
-.related-posts-list-title h4 {
+.related-posts-list-title h3 {
     margin: 0;
     transition: linear 0.1s;
 }

@@ -92,12 +92,8 @@
 
                 <!-- Blog Content -->
                 <div class="blog-content">
-                    <h2>
-                        <a
-                            href="#es2025-ra-mat-cai-gi-that-su-vao-spec"
-                            id="es2025-ra-mat-cai-gi-that-su-vao-spec"
-                            >ES2025 ra mắt - cái gì thật sự vào spec?</a
-                        >
+                    <h2 id="es2025-ra-mat-cai-gi-that-su-vao-spec">
+                        ES2025 ra mắt - cái gì thật sự vào spec?
                     </h2>
                     <p>
                         Tháng 6/2025, TC39 chính thức công bố ECMAScript 2025
@@ -159,20 +155,16 @@
                         cho production nếu bạn target môi trường đủ mới.
                     </p>
                     <p>
-                        Pipeline operator (<code>&#9655</code>) và Temporal API? Vẫn
-                        đang ở Stage 2-3. Dùng Luxon hoặc date-fns cho date/time
-                        là lựa chọn thực tế nhất hiện tại.
+                        Pipeline operator (<code>&#9655;</code>) và Temporal
+                        API? Vẫn đang ở Stage 2-3. Dùng Luxon hoặc date-fns cho
+                        date/time là lựa chọn thực tế nhất hiện tại.
                     </p>
                     <hr />
                     <h2
                         id="iterator-helpers-va-set-methods-dung-that-trong-du-an-the-nao"
                     >
-                        <a
-                            href="#iterator-helpers-va-set-methods-dung-that-trong-du-an-the-nao"
-                        >
-                            Iterator Helpers và Set Methods - dùng thật trong dự
-                            án thế nào?
-                        </a>
+                        Iterator Helpers và Set Methods - dùng thật trong dự án
+                        thế nào?
                     </h2>
                     <p>
                         Hai tính năng này mình thấy practical nhất trong ES2025
@@ -242,9 +234,7 @@ const newMessages = socketMessages.difference(cachedMessages);
                     </p>
                     <hr />
                     <h2 id="promisetry-va-async-await-patterns-nang-cao">
-                        <a href="#promisetry-va-async-await-patterns-nang-cao"
-                            >Promise.try() và async/await patterns nâng cao</a
-                        >
+                        Promise.try() và async/await patterns nâng cao
                     </h2>
                     <p>
                         Đây là tính năng mình mong nhất trong ES2025. Vấn đề cũ:
@@ -320,16 +310,14 @@ export const permissions = initialPermissions.union(cachedPermissions);
                     <p>
                         Nếu bạn muốn nền tảng JavaScript vững để apply những
                         patterns này ngay, khóa
-                        <a href="#" style="color: #f05123">JavaScript Pro</a>
+                        <a href="#" class="link-primary">JavaScript Pro</a>
                         cover sâu về async/await, closures, và cách JS engine
                         thực sự hoạt động - đủ để đọc ES2025 spec mà hiểu rõ tại
                         sao.
                     </p>
                     <hr />
                     <h2 id="rxjs-vs-zustand-chon-gi-cho-realtime-web-app">
-                        <a href="#rxjs-vs-zustand-chon-gi-cho-realtime-web-app"
-                            >RxJS vs Zustand - chọn gì cho realtime web app?</a
-                        >
+                        RxJS vs Zustand - chọn gì cho realtime web app?
                     </h2>
                     <p>
                         Mình sẽ không nói "cái nào tốt hơn" vì câu trả lời phụ
@@ -338,7 +326,7 @@ export const permissions = initialPermissions.union(cachedPermissions);
                     <p>
                         <strong>RxJS</strong> (<a
                             href="#"
-                            style="color: #f05123"
+                            class="link-primary"
                             >RxJS docs</a
                         >) là reactive programming library với Observable - phù
                         hợp khi data flow của bạn phức tạp, nhiều nguồn, cần
@@ -363,7 +351,7 @@ liveData$.subscribe(messages =&gt; updateDashboard(messages));
                     <p>
                         <strong>Zustand</strong> (<a
                             href="#"
-                            style="color: #f05123"
+                            class="link-primary"
                             >Zustand GitHub</a
                         >) đi theo hướng ngược lại - minimal, hooks-based, không
                         boilerplate:
@@ -452,7 +440,7 @@ function ChatApp() {
                     <p>
                         Nếu bạn đang build với ReactJS và chưa rõ cách quản lý
                         state từ cơ bản, khóa
-                        <a href="#" style="color: #f05123">
+                        <a href="#" class="link-primary">
                             Xây Dựng Website với ReactJS</a
                         >
                         sẽ giúp bạn hiểu đúng từ component state đến context
@@ -462,11 +450,8 @@ function ChatApp() {
                     <h2
                         id="xay-realtime-dashboard-voi-es2025-zustand-vi-du-thuc-te"
                     >
-                        <a
-                            href="#xay-realtime-dashboard-voi-es2025-zustand-vi-du-thuc-te"
-                            >Xây realtime dashboard với ES2025 + Zustand: ví dụ
-                            thực tế
-                        </a>
+                        Xây realtime dashboard với ES2025 + Zustand: ví dụ thực
+                        tế
                     </h2>
                     <p>
                         Mình sẽ ghép tất cả những gì đã nói vào một mini case
@@ -475,7 +460,7 @@ function ChatApp() {
                     </p>
                     <p>
                         Download file demo đầy đủ tại đây:
-                        <a href="#" style="color: #f05123"
+                        <a href="#" class="link-primary"
                             >Tải file demo Realtime Dashboard
                         </a>
                     </p>
@@ -626,7 +611,7 @@ const useStockStore = create((set, get) =&gt; ({
 
                 <!-- Posts with same author -->
                 <div class="posts-with-same-author">
-                    <h3>Bài đăng cùng tác giả</h3>
+                    <h2>Bài đăng cùng tác giả</h2>
                     <ul>
                         <li>
                             <a href="#"
@@ -673,9 +658,9 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>
+                                <h3>
                                     Tổng hợp các sản phẩm của học viên tại F8
-                                </h4>
+                                </h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -695,10 +680,10 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>
+                                <h3>
                                     [Phần 1] Tạo dự án ReactJS với Webpack và
                                     Babel
-                                </h4>
+                                </h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -718,7 +703,7 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>Ký sự ngày thứ 25 học ở F8</h4>
+                                <h3>Ký sự ngày thứ 25 học ở F8</h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -738,10 +723,10 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>
+                                <h3>
                                     Các nguồn tài nguyên hữu ích cho 1 front-end
                                     developer
-                                </h4>
+                                </h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -763,10 +748,10 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>
+                                <h3>
                                     Tips CSS: Gom nhóm các thuộc tính CSS sao
                                     cho gọn, đẹp, và dễ bảo trì.
-                                </h4>
+                                </h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -786,10 +771,10 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>
+                                <h3>
                                     Các phím tắt thông dụng trong Visual Studio
                                     Code (Windows)
-                                </h4>
+                                </h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -813,7 +798,7 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>Giá trị của một Full-Stack Developer?</h4>
+                                <h3>Giá trị của một Full-Stack Developer?</h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
@@ -833,10 +818,10 @@ const useStockStore = create((set, get) =&gt; ({
                                 alt="related post image"
                             />
                             <div class="related-posts-list-title">
-                                <h4>
+                                <h3>
                                     Bạn là sinh viên? bài blog này là dành cho
                                     bạn [P2] 😎
-                                </h4>
+                                </h3>
                                 <div class="related-posts-list-card-meta">
                                     <div>
                                         <img
