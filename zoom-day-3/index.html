@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tech Blog</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <a href="/" class="logo">TechBlog</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li class="dropdown">
+                            <a href="/categories">Danh mục</a>
+                            <ul class="submenu">
+                                <li><a href="/web">Web Dev</a></li>
+                                <li><a href="/mobile">Mobile</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://github.com/user">GitHub</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <div class="container">
+                <article class="post featured" data-category="web" lang="vi">
+                    <header class="post-header">
+                        <span class="badge new">Mới</span>
+                        <h1 class="post-title">Học CSS Selector Nâng Cao</h1>
+                        <div class="post-meta">
+                            <span class="author"
+                                >Tác giả:
+                                <a href="/author/john">John Doe</a></span
+                            >
+                            <time datetime="2024-01-15">15/01/2024</time>
+                            <span class="reading-time" data-minutes="5"
+                                >5 phút đọc</span
+                            >
+                        </div>
+                    </header>
+
+                    <div class="post-content">
+                        <p class="lead">
+                            CSS Selector là công cụ mạnh mẽ giúp bạn chọn và tạo
+                            kiểu cho các phần tử HTML. Trong bài viết này, chúng
+                            ta sẽ khám phá các selector nâng cao.
+                        </p>
+
+                        <h2 id="intro">Giới thiệu</h2>
+                        <p>
+                            Selector cơ bản bao gồm element, class và id
+                            selector.
+                        </p>
+                        <p>Tuy nhiên, CSS còn nhiều selector phức tạp hơn.</p>
+
+                        <blockquote class="quote" cite="https://example.com">
+                            Học đi đôi với hành, lý thuyết kết hợp thực tiễn.
+                        </blockquote>
+
+                        <h2>Các loại Selector</h2>
+                        <p>Có nhiều loại selector khác nhau trong CSS.</p>
+
+                        <h3>Simple Selectors</h3>
+                        <ul class="feature-list">
+                            <li>Element selector</li>
+                            <li>Class selector</li>
+                            <li>ID selector</li>
+                            <li>Universal selector</li>
+                        </ul>
+
+                        <h3>Combinators</h3>
+                        <ol class="steps">
+                            <li>Descendant combinator (space)</li>
+                            <li>Child combinator (>)</li>
+                            <li>Adjacent sibling (+)</li>
+                            <li>General sibling (~)</li>
+                        </ol>
+
+                        <div class="code-block" data-lang="css">
+                            <pre><code>.parent > .child { color: red; }</code></pre>
+                        </div>
+
+                        <h2>Bảng so sánh</h2>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Selector</th>
+                                    <th>Ví dụ</th>
+                                    <th>Độ ưu tiên</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-priority="low">
+                                    <td>Element</td>
+                                    <td>p</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr data-priority="medium">
+                                    <td>Class</td>
+                                    <td>.text</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr data-priority="high">
+                                    <td>ID</td>
+                                    <td>#main</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr data-priority="medium">
+                                    <td>Attribute</td>
+                                    <td>[type="text"]</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Tài liệu tham khảo</h2>
+                        <ul class="resource-list">
+                            <li>
+                                <a
+                                    href="https://developer.mozilla.org/vi/docs/Web/CSS"
+                                    >MDN CSS</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/docs/guide.pdf" download
+                                    >Hướng dẫn PDF</a
+                                >
+                            </li>
+                            <li><a href="/internal-doc">Tài liệu nội bộ</a></li>
+                            <li>
+                                <a href="https://css-tricks.com">CSS Tricks</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <footer class="post-footer">
+                        <div class="tags">
+                            <a href="/tag/css" class="tag">CSS</a>
+                            <a href="/tag/web" class="tag">Web</a>
+                            <a href="/tag/tutorial" class="tag featured"
+                                >Tutorial</a
+                            >
+                        </div>
+                        <div class="share-buttons">
+                            <button class="btn btn-share btn-facebook">
+                                Facebook
+                            </button>
+                            <button class="btn btn-share btn-twitter">
+                                Twitter
+                            </button>
+                            <button class="btn btn-primary">
+                                Lưu bài viết
+                            </button>
+                        </div>
+                    </footer>
+                </article>
+
+                <aside class="sidebar">
+                    <section class="widget widget-search">
+                        <h3>Tìm kiếm</h3>
+                        <form class="search-form" action="/search">
+                            <input
+                                type="search"
+                                name="q"
+                                placeholder="Tìm kiếm..."
+                                required
+                            />
+                            <button type="submit">Tìm</button>
+                        </form>
+                    </section>
+
+                    <section class="widget widget-categories">
+                        <h3>Danh mục</h3>
+                        <ul>
+                            <li><a href="/web">Web Development</a></li>
+                            <li><a href="/mobile">Mobile Development</a></li>
+                            <li><a href="/design">UI/UX Design</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="widget widget-newsletter">
+                        <h3>Đăng ký nhận tin</h3>
+                        <form class="newsletter-form">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Họ tên"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email của bạn"
+                                required
+                            />
+                            <input type="checkbox" id="agree" required />
+                            <label for="agree">Tôi đồng ý nhận email</label>
+                            <button type="submit" disabled>Đăng ký</button>
+                        </form>
+                    </section>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h4>Về chúng tôi</h4>
+                        <p lang="vi-VN">Blog chia sẻ kiến thức lập trình.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Liên kết</h4>
+                        <ul>
+                            <li><a href="/about">Giới thiệu</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 TechBlog. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

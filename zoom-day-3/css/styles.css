@@ -1,0 +1,218 @@
+/* Base Styles */
+body {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bài 1: Combinators */
+
+/* 1 */
+.main-nav ul li a {
+    color: #1d4ed8;
+}
+
+/* 2 */
+.main-nav > ul > li > a {
+    background-color: #f1f5f9;
+}
+
+/* 3 */
+.post-content h2 + p {
+    color: #64748b;
+}
+
+/* 4 */
+.post-content h2 ~ p {
+    color: #0f172a;
+}
+
+/* 5 */
+.post-header .post-meta .author a {
+    color: #f97316;
+}
+
+/* Bài 2: CSS Nesting */
+
+.site-main {
+    .post {
+        /* 1 */
+        background-color: white;
+
+        /* 2 */
+        .post-title {
+            color: #0f172a;
+        }
+
+        /* 4 */
+        &.featured {
+            background-color: #fefce8;
+        }
+
+        /* 3 */
+        &:hover {
+            background-color: #f8fafc;
+        }
+
+        /* 5 */
+        &:hover .post-title {
+            color: #2563eb;
+        }
+    }
+}
+
+/* Bài 3: Interactive Pseudo-classes */
+
+/* 1 */
+.post a:link {
+    color: #25a6eb;
+}
+
+.post a:visited {
+    color: #9333ea;
+}
+
+.post a:hover {
+    color: #1e40af;
+}
+
+.post a:active {
+    color: #8a201e;
+}
+
+/* 2 */
+button.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+button:hover {
+    background-color: #3b82f6;
+}
+
+button:active {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    color: #cbd5e1;
+}
+
+/* 3 */
+input:focus {
+    background-color: #eff6ff;
+}
+
+/* Bài 4: Structural Pseudo-classes */
+
+/* 1 */
+.comparison-table tbody tr:nth-child(odd) {
+    background-color: #f8fafc;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.comparison-table thead tr:first-child {
+    background-color: #0f172a;
+    color: white;
+}
+
+.comparison-table tbody tr:last-child {
+    background-color: #dbeafe;
+}
+
+/* 2 */
+ol.steps li:first-child {
+    color: #16a34a;
+}
+
+ol.steps li:last-child {
+    color: #dc2626;
+}
+
+ol.steps li:nth-child(3) {
+    background-color: #fef3c7;
+}
+
+/* 3 */
+.sidebar .widget:not(:last-child) {
+    background-color: white;
+}
+
+/* Bài 5: Pseudo-elements */
+
+/* 1 */
+.post-content p.lead::first-line {
+    color: #0f172a;
+}
+
+.post-content p.lead::first-letter{
+    color: #2563eb;
+}
+
+/* 2 */
+.quote::before {
+    content: '"';
+    color: #cbd5e1;
+}
+
+/* 3 */
+ol.steps li::marker {
+    color: #2563eb;
+}
+
+/* 4 */
+::selection {
+    background-color: #bfdbfe;
+    color: #0f172a;
+}
+
+/* 5 */
+span.badge::before {
+    content: "●";
+    color: #ef4444;
+    /* hoặc
+    content: "";
+    display: inline-block; 
+    width: 10px;
+    height: 10px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    */
+}
+
+/* Bài 6: Attribute Selectors */
+
+/* 1 */
+input[required]{
+    background-color: #fffbeb;
+}
+
+/* 2 */
+a[href^="https://"] {
+    color: #2563eb;
+}
+
+/* 3 */
+a[href$=".pdf"] {
+    color: #ea580c;
+}
+
+/* 4 */
+button[class*="btn"] {
+    background-color: #e2e8f0;
+}
+
+/* 5 */
+[lang^="vi"] {
+    color: #0f172a;
+}
+
+/* 6 */
+.comparison-table tbody tr[data-priority="high"] {
+    background-color: #fee2e2;
+}
