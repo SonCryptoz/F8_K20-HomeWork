@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoom-Day-4</title>
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* Base styles */
+            html {
+                font-family: "Miranda Sans", sans-serif;
+                font-size: 62.5%;
+                line-height: 1.6;
+            }
+
+            body {
+                margin: 0;
+                padding: 20px 0;
+                font-size: 1.6rem;
+                background-color: #f9fafb;
+                color: #111827;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+
+            /* Main Container */
+            .wrapper {
+                max-width: 900px;
+                width: 100%;
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+            }
+
+            .wrapper .title {
+                margin: 0;
+                padding: 20px;
+                background-color: #f98000;
+                color: #f9fafb;
+                font-size: 2.4rem;
+                text-align: center;
+                letter-spacing: 0.5px;
+            }
+
+            /* Config */
+            .wrapper .config-content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .config-theme,
+            .config-color,
+            .config-language,
+            .config-options {
+                background-color: #f8fafc;
+                border: 1px solid #e2e8f0;
+                padding: 20px;
+                border-radius: 8px;
+
+                .theme,
+                .color,
+                .language,
+                .options {
+                    display: inline-block;
+                    background-color: #e5e7eb;
+                    color: #111827;
+                    margin-bottom: 20px;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    font-weight: bold;
+                }
+
+                .align {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    
+                    .align-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #eef2ff;
+                        color: #4b5563;
+                        padding: 12px 20px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                cursor: pointer;
+                width: 18px;
+                height: 18px;
+                margin: 0 8px 0 0;
+                vertical-align: middle;
+            }
+
+            /* Result*/
+            .wrapper .config-result {
+                padding: 20px;
+                background-color: #f3f4f6;
+                color: #111827;
+                border-top: 3px dashed #f98000; /* Phân cách rõ ràng với phần config */
+            }
+
+            .wrapper .config-result p {
+                margin-top: 0;
+                margin-bottom: 20px;
+                padding: 8px 12px;
+                background: #ffffff;
+                border-radius: 6px;
+                color: #9ca3af;
+            }
+
+            .wrapper .config-result p:last-child {
+                margin-bottom: 0;
+            }
+
+            /* Xử lý logic cấu hình giao diện bằng css */
+
+            /* 1. Chọn giao diện */
+
+            /* Light theme */
+            .align-item:has(input[id="theme-light"]:checked) {
+                background-color: #fff8cc;
+                color: #8b5e00;
+                font-weight: bold;
+            }
+
+            input[id="theme-light"]:checked {
+                accent-color: #8b5e00;
+            }
+
+            .wrapper:has(input[id="theme-light"]:checked) .result-light {
+                background-color: #fff8cc;
+                color: #111827;
+            }
+
+            /* Dark theme */
+            .align-item:has(input[id="theme-dark"]:checked) {
+                background-color: #111827;
+                color: #f9fafb;
+            }
+
+            input[id="theme-dark"]:checked {
+                accent-color: #111827;
+            }
+
+            .wrapper:has(input[id="theme-dark"]:checked) .result-dark {
+                background-color: #111827;
+                color: #f9fafb;
+            }
+
+            /* 2. Chọn màu chủ đạo (Color) */
+
+            /* Red color */
+            .align-item:has(input[id="color-red"]:checked) {
+                background-color: #fee2e2;
+                color: #991b1b;
+                font-weight: bold;
+            }
+
+            input[id="color-red"]:checked {
+                accent-color: #991b1b;
+            }
+
+            .wrapper:has(input[id="color-red"]:checked) .result-red {
+                background-color: #fee2e2;
+                color: #7f1d1d;
+                font-weight: bold;
+            }
+
+            /* Blue color */
+            .align-item:has(input[id="color-blue"]:checked) {
+                background-color: #dbeafe;
+                color: #1d4ed8;
+                font-weight: bold;
+            }
+
+            input[id="color-blue"]:checked {
+                accent-color: #1d4ed8;
+            }
+
+            .wrapper:has(input[id="color-blue"]:checked) .result-blue {
+                background-color: #dbeafe;
+                color: #1d4ed8;
+                font-weight: bold;
+            }
+
+            /* Green color */
+            .align-item:has(input[id="color-green"]:checked) {
+                background-color: #dcfce7;
+                color: #166534;
+                font-weight: bold;
+            }
+
+            input[id="color-green"]:checked {
+                accent-color: #166534;
+            }
+
+            .wrapper:has(input[id="color-green"]:checked) .result-green {
+                background-color: #dcfce7;
+                color: #166534;
+                font-weight: bold;
+            }
+
+            /* 3.  Chọn ngôn ngữ (Language) */
+
+            /* Vietnamese */
+            .align-item:has(input[id="lang-vi"]:checked) {
+                background-color: #bbf7d0;
+                color: #166534;
+                font-weight: bold;
+            }
+
+            input[id="lang-vi"]:checked {
+                accent-color: #166534;
+            }
+
+            .wrapper:has(input[id="lang-vi"]:checked) .result-vi {
+                color: #166534;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            /* English */
+            .align-item:has(input[id="lang-en"]:checked) {
+                background-color: #bfdbfe;
+                color: #1d4ed8;
+                font-weight: bold;
+            }
+
+            input[id="lang-en"]:checked {
+                accent-color: #1d4ed8;
+            }
+
+            .wrapper:has(input[id="lang-en"]:checked) .result-en {
+                color: #1d4ed8;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            /* 4. Tùy chọn bổ sung (options) */
+
+            /* Advanced description */
+            .align-item:has(input[id="advanced-description"]:checked) {
+                background-color: #fef3c7;
+                color: #92400e;
+                font-weight: bold;
+            }
+
+            input[id="advanced-description"]:checked {
+                accent-color: #92400e;
+            }
+
+            .wrapper:has(input[id="advanced-description"]:checked)
+                .result-advanced {
+                background-color: #fef3c7;
+                color: #92400e;
+                font-weight: bold;
+            }
+
+            /* Eco mode */
+            .align-item:has(input[id="eco-mode"]:checked) {
+                background-color: #bbf7d0;
+                color: #15803d;
+                font-weight: bold;
+            }
+
+            input[id="eco-mode"]:checked {
+                accent-color: #15803d;
+            }
+
+            .wrapper:has(input[id="eco-mode"]:checked) .result-eco {
+                background-color: #bbf7d0;
+                color: #166534;
+                font-weight: bold;
+            }
+
+            /* Important warning */
+            .align-item:has(input[id="important-warning"]:checked) {
+                background-color: #fee2e2;
+                color: #b91c1c;
+                font-weight: bold;
+            }
+
+            input[id="important-warning"]:checked {
+                accent-color: #b91c1c;
+            }
+
+            .wrapper:has(input[id="important-warning"]:checked)
+                .result-important {
+                background-color: #fee2e2;
+                color: #b91c1c;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Title -->
+            <h1 class="title">Trung tâm cấu hình giao diện (Demo)</h1>
+
+            <!-- Content config -->
+            <div class="config-content">
+                <!-- Theme config -->
+                <div class="config-theme">
+                    <span class="theme">Chọn giao diện (Theme):</span>
+                    <div class="align">
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="theme-radio"
+                                id="theme-light"
+                                checked
+                            />
+                            <span lang="en">Light</span>
+                        </label>
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="theme-radio"
+                                id="theme-dark"
+                            />
+                            <span lang="en">Dark</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Color config -->
+                <div class="config-color">
+                    <span class="color">Chọn màu sắc chủ đạo (Color):</span>
+                    <div class="align">
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="color-radio"
+                                id="color-red"
+                                checked
+                            />
+                            <span lang="en">Red</span>
+                        </label>
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="color-radio"
+                                id="color-blue"
+                            />
+                            <span lang="en">Blue</span>
+                        </label>
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="color-radio"
+                                id="color-green"
+                            />
+                            <span lang="en">Green</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Language config -->
+                <div class="config-language">
+                    <span class="language">Chọn ngôn ngữ (Language):</span>
+                    <div class="align">
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="lang-radio"
+                                id="lang-vi"
+                                checked
+                            />
+                            <span>VI</span>
+                        </label>
+                        <label class="align-item">
+                            <input
+                                type="radio"
+                                name="lang-radio"
+                                id="lang-en"
+                            />
+                            <span>EN</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Additional options -->
+                <div class="config-options">
+                    <span class="options">
+                        Tùy chọn bổ sung (Options - Checkbox):
+                    </span>
+                    <div class="align">
+                        <label class="align-item">
+                            <input
+                                type="checkbox"
+                                name="options-checkbox"
+                                id="advanced-description"
+                            />
+                            <span>Hiển thị mô tả nâng cao</span>
+                        </label>
+                        <label class="align-item">
+                            <input
+                                type="checkbox"
+                                name="options-checkbox"
+                                id="eco-mode"
+                            />
+                            <span>Bật chế độ Eco</span>
+                        </label>
+                        <label class="align-item">
+                            <input
+                                type="checkbox"
+                                name="options-checkbox"
+                                id="important-warning"
+                            />
+                            <span>Hiển thị cảnh báo quan trọng</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result config -->
+            <div class="config-result">
+                <p class="result-light">
+                    <span lang="en">Theme Light:</span>
+                    Giao diện sáng, chữ đen
+                </p>
+                <p class="result-dark">
+                    <span lang="en">Theme Dark:</span>
+                    Giao diện tối, chữ sáng
+                </p>
+                <p class="result-red">
+                    Màu <span lang="en">Red:</span> được nhấn mạnh khi chọn
+                    <span lang="en">Red.</span>
+                </p>
+                <p class="result-blue">
+                    Màu <span lang="en">Blue:</span> được nhấn mạnh khi chọn
+                    <span lang="en">Blue.</span>
+                </p>
+                <p class="result-green">
+                    Màu <span lang="en">Green:</span> được nhấn mạnh khi chọn
+                    <span lang="en">Green.</span>
+                </p>
+                <p class="result-vi">
+                    [VI] Xin chào bạn! Khi chọn VI,dòng này rõ hơn.
+                </p>
+                <p class="result-en">
+                    <span lang="en">[EN] Hello World!</span>
+                    Khi chọn EN,dòng này rõ hơn.
+                </p>
+                <p class="result-advanced">
+                    Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang
+                    ảnh hưởng đến giao diện.
+                </p>
+                <p class="result-eco">
+                    Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho
+                    giao diện.
+                </p>
+                <p class="result-important">
+                    Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ
+                    thống.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
