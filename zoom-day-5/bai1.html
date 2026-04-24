@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoom Day 5</title>
+        <style>
+            /* Base styles */
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 1200px;
+                margin: 60px auto;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Open Sans",
+                    "Helvetica Neue",
+                    sans-serif;
+            }
+
+            .wrapper {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 80px;
+                flex-wrap: wrap;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                font-size: 1.4rem;
+            }
+
+            /* Vẽ các hình bằng border */
+
+            /* hình vuông */
+            .square {
+                width: 200px;
+                height: 200px;
+                border: 4px solid #e14040;
+            }
+
+            /* Hình chữ nhật */
+            .rectangle {
+                width: 280px;
+                height: 140px;
+                border: 4px solid #32cbf1;
+            }
+
+            /* Tam giác trên */
+            .up-triangle {
+                border-color: transparent transparent #6dc978 transparent;
+                border-style: solid;
+                border-width: 0 100px 200px;
+            }
+
+            /* Tam giác dưới */
+            .down-triangle {
+                border-color: #e3a031 transparent transparent transparent;
+                border-style: solid;
+                border-width: 200px 100px 0;
+            }
+
+            /* Tam giác trái */
+            .left-triangle {
+                border-color: transparent #905cb2 transparent transparent;
+                border-style: solid;
+                border-width: 100px 200px 100px 0;
+            }
+
+            /* Tam giác phải */
+            .right-triangle {
+                border-color: transparent transparent transparent #d48332;
+                border-style: solid;
+                border-width: 100px 0 100px 200px;
+            }
+
+            /* Hình thang */
+            .trapezoid {
+                width: 250px;
+                border-color: transparent transparent #61b99d transparent;
+                border-style: solid;
+                border-width: 0 100px 200px;
+            }
+
+            /* Tam giác rộng */
+            .wide-triangle {
+                border-color: transparent transparent #3a485d transparent;
+                border-style: solid;
+                border-width: 0 250px 200px;
+            }
+
+            /* Tam giác nhọn */
+            .pointed-triangle {
+                border-color: transparent transparent #ad4430 transparent;
+                border-style: solid;
+                border-width: 0 50px 200px;
+            }
+
+            /* Tam giác cân*/
+            .isosceles-triangle {
+                border-color: transparent transparent #c05c19 transparent;
+                border-style: solid;
+                border-width: 0 150px 200px;
+            }
+
+            /* Mũi tên phải */
+            .right-arrow {
+                border-color: transparent transparent transparent #529e86;
+                border-style: solid;
+                border-width: 100px 150px;
+            }
+
+            /* Mũi tên trái */
+            .left-arrow {
+                border-color: transparent #8348a9 transparent transparent;
+                border-style: solid;
+                border-width: 100px 150px;
+            }
+
+            /* Ribbon / Lá cờ */
+            .flag-ribbon {
+                width: 150px;
+                border-color: #d15841 transparent #d15841 #d15841;
+                border-style: solid;
+                border-width: 100px;
+            }
+
+            /* Hình F8 */
+            .f8 {
+                display: flex;
+                gap: 40px;
+
+                /* Chữ F*/
+                .f8-left {
+                    div:first-child {
+                        padding: 30px 55px;
+                        border-color: #d15841 transparent #d15841 #d15841;
+                        border-style: solid;
+                        border-width: 30px 0 30px 30px;
+                    }
+
+                    div:last-child {
+                        padding: 50px 55px;
+                        border-color: transparent transparent transparent
+                            #d15841;
+                        border-style: solid;
+                        border-width: 0 0 0 30px;
+                    }
+                }
+
+                /* Số 8 */
+                .f8-right {
+                    div:first-child {
+                        padding: 30px 40px;
+                        border-color: #d15841;
+                        border-style: solid;
+                        border-width: 30px;
+                    }
+
+                    div:last-child {
+                        padding: 35px;
+                        border-color: transparent #d15841 #d15841 #d15841;
+                        border-style: solid;
+                        border-width: 0 30px 30px 30px;
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Các hình có thể tạo được với Border</h1>
+        <div class="wrapper">
+            <!-- Hình vuông -->
+            <div class="item">
+                <div class="square"></div>
+                <span>1. Hình vuông</span>
+            </div>
+
+            <!-- Hình chữ nhật -->
+            <div class="item">
+                <div class="rectangle"></div>
+                <span>2. Hình chữ nhật</span>
+            </div>
+
+            <!-- Tam giác lên -->
+            <div class="item">
+                <div class="up-triangle"></div>
+                <span>3. Tam giác lên</span>
+            </div>
+
+            <!-- Tam giác xuống -->
+            <div class="item">
+                <div class="down-triangle"></div>
+                <span>4. Tam giác xuống</span>
+            </div>
+
+            <!-- Tam giác trái -->
+            <div class="item">
+                <div class="left-triangle"></div>
+                <span>5. Tam giác trái</span>
+            </div>
+
+            <!-- Tam giác phải -->
+            <div class="item">
+                <div class="right-triangle"></div>
+                <span>6. Tam giác phải</span>
+            </div>
+
+            <!-- Hình thang -->
+            <div class="item">
+                <div class="trapezoid"></div>
+                <span>7. Hình thang</span>
+            </div>
+
+            <!-- Tam giác rộng -->
+            <div class="item">
+                <div class="wide-triangle"></div>
+                <span>8. Tam giác rộng</span>
+            </div>
+
+            <!-- Tam giác nhọn -->
+            <div class="item">
+                <div class="pointed-triangle"></div>
+                <span>9. Tam giác nhọn</span>
+            </div>
+
+            <!-- Tam giác cân -->
+            <div class="item">
+                <div class="isosceles-triangle"></div>
+                <span>10. Tam giác cân</span>
+            </div>
+
+            <!-- Mũi tên phải -->
+            <div class="item">
+                <div class="right-arrow"></div>
+                <span>11. Mũi tên phải</span>
+            </div>
+
+            <!-- Mũi tên trái -->
+            <div class="item">
+                <div class="left-arrow"></div>
+                <span>12. Mũi tên trái</span>
+            </div>
+
+            <!-- Ribbon / Lá cờ -->
+            <div class="item">
+                <div class="flag-ribbon"></div>
+                <span>13. Ribbon / Lá cờ</span>
+            </div>
+
+            <!-- Hình F8 -->
+            <div class="item">
+                <div class="f8">
+                    <div class="f8-left">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="f8-right">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <span>14. F8</span>
+            </div>
+        </div>
+    </body>
+</html>
