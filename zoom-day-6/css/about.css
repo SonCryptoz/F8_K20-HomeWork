@@ -1,0 +1,276 @@
+/* =========================
+    PAGE HERO
+========================= */
+
+.page-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 120px 20px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #86f6f2,
+        #1d41b6,
+        #111827
+    );
+}
+
+.page-hero-content {
+    max-width: 800px;
+}
+
+.page-hero-subtitle {
+    margin-bottom: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #bfdbfe;
+}
+
+.page-hero-title {
+    margin: 0 0 24px;
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+.page-hero-description {
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #e5e7eb;
+}
+
+.page-hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* =========================
+    ABOUT ME SECTION
+========================= */
+
+.about-me-section {
+    padding: 100px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-avatar-wrapper {
+    flex: 1;
+}
+
+.about-avatar-large {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-me-text {
+    flex: 1;
+}
+
+.about-paragraph {
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: #374151;
+    text-align: justify;
+}
+
+/* =========================
+    QUOTE SECTION
+========================= */
+
+.quote-section {
+    padding: 100px 20px;
+    background-color: #f3f4f6;
+}
+
+.favorite-quote {
+    max-width: 900px;
+    padding: 48px;
+    margin: 0 auto 32px;
+    border-left: 6px solid #2563eb;
+    border-radius: 24px;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.quote-text {
+    margin: 0 0 24px;
+    font-size: 32px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.quote-footer {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.quote-footer cite {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.short-quote {
+    text-align: center;
+    font-size: 18px;
+    color: #374151;
+}
+
+.short-quote q {
+    font-style: italic;
+    color: #2563eb;
+}
+
+/* =========================
+    TIMELINE SECTION
+========================= */
+
+.timeline-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.timeline-list {
+    position: relative;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.timeline-year {
+    min-width: 90px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 28px;
+    border-radius: 20px;
+    background-color: #f3f4f6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-title {
+    margin: 0 0 16px;
+    font-size: 24px;
+}
+
+.timeline-description {
+    margin: 0 0 16px;
+    color: #4b5563;
+}
+
+.timeline-update {
+    margin: 0;
+    color: #6b7280;
+}
+
+/* =========================
+    HOBBIES SECTION
+========================= */
+
+.hobbies-section {
+    padding: 100px 20px;
+    background-color: #f3f4f6;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.hobby-card {
+    padding: 36px 28px;
+    border-radius: 24px;
+    text-align: center;
+    background-color: white;
+    transition: 0.3s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+}
+
+.hobby-icon {
+    font-size: 56px;
+    color: #2563eb;
+}
+
+.hobby-title {
+    margin: 20px 0 14px;
+    font-size: 24px;
+}
+
+.hobby-description {
+    margin: 0;
+    color: #6b7280;
+}
+
+/* =========================
+    VIDEO SECTION
+========================= */
+
+.intro-video-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.video-wrapper,
+.youtube-wrapper {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.video-wrapper {
+    margin-bottom: 48px;
+}
+
+.intro-video {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-wrapper iframe {
+    width: 100%;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+    ACTIVE NAVIGATION
+========================= */
+
+.nav-link.active {
+    color: #2563eb;
+    background-color: #eff6ff;
+}

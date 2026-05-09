@@ -1,0 +1,49 @@
+/* =========================
+    HEADER
+========================= */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 20px 0;
+}
+
+.logo-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+.nav-icon {
+    font-size: 20px;
+}

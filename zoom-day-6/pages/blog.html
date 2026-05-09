@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="vi" id="top">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog</title>
+
+        <!-- Prism.js to highlight code blocks -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css"
+        />
+
+        <!-- MDI Lib -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/blog.css" />
+        <link rel="stylesheet" href="../css/footer.css" />
+    </head>
+    <body>
+        <!-- =========================
+            HEADER SECTION
+        ========================== -->
+        <header class="header">
+            <div class="header-container">
+                <a href="../index.html" class="logo">
+                    <span class="logo-name">Nguyen Son</span>
+                </a>
+
+                <!-- menu điều hướng -->
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">
+                                <i class="mdi mdi-home nav-icon"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./about.html" class="nav-link">
+                                <i class="mdi mdi-account nav-icon"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./skills.html" class="nav-link">
+                                <i
+                                    class="mdi mdi-lightbulb-on-outline nav-icon"
+                                ></i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./projects.html" class="nav-link">
+                                <i class="mdi mdi-folder-outline nav-icon"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./blog.html" class="nav-link">
+                                <i
+                                    class="mdi mdi-note-text-outline nav-icon"
+                                ></i>
+                                <span>Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./contact.html" class="nav-link">
+                                <i class="mdi mdi-email-outline nav-icon"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- =========================
+            MAIN SECTION
+        ========================== -->
+        <main class="main-section">
+            <!-- =========================
+                BLOG HERO
+            ========================== -->
+            <section class="blog-hero-section">
+                <div class="blog-hero-content">
+                    <p class="blog-category">Web Development</p>
+
+                    <h1 class="blog-title">
+                        Tại sao Semantic HTML lại quan trọng trong phát triển
+                        website hiện đại?
+                    </h1>
+
+                    <div class="blog-meta">
+                        <p class="blog-author">
+                            Tác giả:
+                            <strong>Nguyen Son</strong>
+                        </p>
+
+                        <p class="blog-date">
+                            Ngày đăng:
+                            <time datetime="2026-05-09"> 09/05/2026 </time>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- cover image -->
+                <div class="blog-cover-wrapper">
+                    <img
+                        src="../images/blog.png"
+                        alt="Ảnh cover bài viết Semantic HTML"
+                        width="1400"
+                        height="600"
+                        class="blog-cover-image"
+                    />
+                </div>
+            </section>
+
+            <!-- =========================
+                TABLE OF CONTENTS
+            ========================== -->
+            <section class="table-of-contents-section">
+                <div class="toc-wrapper">
+                    <h2 class="toc-title">Mục lục bài viết</h2>
+
+                    <nav class="toc-navigation">
+                        <ol class="toc-list">
+                            <li>
+                                <a href="#semantic-html">
+                                    Semantic HTML là gì?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#seo-accessibility">
+                                    SEO và Accessibility
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#code-example">
+                                    Ví dụ code Semantic HTML
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#css-example"> Ví dụ CSS Layout </a>
+                            </li>
+
+                            <li>
+                                <a href="#references"> Tài liệu tham khảo </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- =========================
+                BLOG CONTENT
+            ========================== -->
+            <article class="blog-article">
+                <!-- =========================
+                    SECTION 1
+                ========================== -->
+                <section class="blog-section" id="semantic-html">
+                    <h2 class="blog-section-title">Semantic HTML là gì?</h2>
+
+                    <p class="blog-paragraph">
+                        Semantic HTML là cách sử dụng các thẻ HTML mang ý nghĩa
+                        rõ ràng như <code>&lt;header&gt;</code>,
+                        <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>,
+                        <code>&lt;article&gt;</code> hoặc
+                        <code>&lt;footer&gt;</code>
+                        để mô tả cấu trúc nội dung website.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Thay vì sử dụng quá nhiều
+                        <code>&lt;div&gt;</code>, semantic HTML giúp trình
+                        duyệt, search engine và screen reader hiểu rõ vai trò
+                        của từng phần nội dung.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Trong phát triển website hiện đại,
+                        <strong
+                            >semantic HTML gần như là tiêu chuẩn bắt
+                            buộc</strong
+                        >
+                        nếu muốn xây dựng website chuyên nghiệp và dễ maintain.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Một điểm mình rất thích là semantic HTML giúp code
+                        <em>dễ đọc hơn rất nhiều</em>. Khi nhìn vào cấu trúc
+                        HTML, developer khác có thể nhanh chóng hiểu layout của
+                        website.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Ngoài ra,
+                        <mark>
+                            semantic HTML còn hỗ trợ SEO và accessibility cực kỳ
+                            tốt </mark
+                        >.
+                    </p>
+                </section>
+
+                <!-- =========================
+                    SECTION 2
+                ========================== -->
+                <section class="blog-section" id="seo-accessibility">
+                    <h2 class="blog-section-title">SEO và Accessibility</h2>
+
+                    <p class="blog-paragraph">
+                        Search engine như Google sử dụng semantic structure để
+                        hiểu nội dung chính của website. 
+                        <br>
+                        Ví dụ:
+                        <code>&lt;article&gt;</code>
+                        thường chứa nội dung bài viết, còn
+                        <code>&lt;nav&gt;</code>
+                        dùng cho navigation menu.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Accessibility cũng là yếu tố rất quan trọng. Những người
+                        sử dụng screen reader sẽ dễ dàng điều hướng website hơn
+                        khi cấu trúc semantic được xây dựng chính xác.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Khi code, mình thường dùng phím tắt
+                        <kbd>Ctrl</kbd>
+                        +
+                        <kbd>S</kbd>
+                        để lưu file nhanh và kiểm tra lại semantic structure
+                        thường xuyên.
+                    </p>
+
+                    <p class="blog-paragraph">
+                        Nếu cấu trúc đúng, trình validator có thể trả về output
+                        như:
+                        <samp>
+                            Document checking completed. No errors or warnings
+                            found.
+                        </samp>
+                    </p>
+
+                    <!-- blockquote -->
+                    <blockquote class="blog-quote">
+                        <p>
+                            "The power of the Web is in its universality. Access
+                            by everyone regardless of disability is an essential
+                            aspect."
+                        </p>
+
+                        <footer>
+                            —
+                            <cite> Tim Berners-Lee </cite>
+                        </footer>
+                    </blockquote>
+                </section>
+
+                <!-- =========================
+                    SECTION 3
+                ========================== -->
+                <section class="blog-section" id="code-example">
+                    <h2 class="blog-section-title">Ví dụ Semantic HTML</h2>
+
+                    <p class="blog-paragraph">
+                        Đây là ví dụ về một layout semantic cơ bản:
+                    </p>
+
+                    <!-- code block -->
+                    <pre
+                        class="lang-html"
+                    ><code>&lt;!-- Header của website --&gt;
+&lt;header class="header"&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;ul class="nav-list"&gt;
+            &lt;li&gt;
+                &lt;a href="/"&gt;Trang chủ&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;!-- Nội dung chính --&gt;
+&lt;main&gt;
+    &lt;section class="hero"&gt;
+        &lt;h1&gt;Semantic HTML&lt;/h1&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;!-- Footer website --&gt;
+&lt;footer&gt;
+    &lt;p&gt;Copyright 2026&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+                    <p class="blog-paragraph">
+                        Việc chia layout như trên giúp website rõ ràng hơn thay
+                        vì chỉ dùng nhiều <code>&lt;div&gt;</code>.
+                    </p>
+                </section>
+
+                <!-- =========================
+                    SECTION 4
+                ========================== -->
+                <section class="blog-section" id="css-example">
+                    <h2 class="blog-section-title">Ví dụ CSS Layout</h2>
+
+                    <p class="blog-paragraph">
+                        Dưới đây là ví dụ CSS đơn giản sử dụng Flexbox:
+                    </p>
+
+                    <!-- code block -->
+                    <pre class="lang-css"><code>/* Container layout */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+
+                    <p class="blog-paragraph">
+                        Mình thường kết hợp semantic HTML với
+                        <strong>Flexbox</strong>
+                        và <strong>CSS Grid</strong>
+                        để xây dựng layout responsive hiện đại.
+                    </p>
+                </section>
+
+                <!-- =========================
+                    REFERENCES SECTION
+                ========================== -->
+                <section class="blog-section" id="references">
+                    <h2 class="blog-section-title">Tài liệu tham khảo</h2>
+
+                    <ul class="reference-list">
+                        <li>
+                            <cite> MDN Web Docs </cite>
+
+                            -
+                            <a
+                                href="https://developer.mozilla.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                developer.mozilla.org
+                            </a>
+                        </li>
+
+                        <li>
+                            <cite> W3C HTML Specification </cite>
+
+                            -
+                            <a
+                                href="https://www.w3.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                w3.org
+                            </a>
+                        </li>
+
+                        <li>
+                            <cite> web.dev </cite>
+
+                            -
+                            <a
+                                href="https://web.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                web.dev
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- =========================
+                AUTHOR SECTION
+            ========================== -->
+            <section class="author-section">
+                <div class="author-card">
+                    <div class="author-avatar-wrapper">
+                        <img
+                            src="../images/avatar.jpg"
+                            alt="Avatar Nguyen Son"
+                            width="200"
+                            height="200"
+                            loading="lazy"
+                            class="author-avatar"
+                        />
+                    </div>
+
+                    <div class="author-content">
+                        <h2 class="author-name">Nguyen Son</h2>
+
+                        <p class="author-description">
+                            Front-end Developer yêu thích semantic HTML, UI
+                            Design và xây dựng web hiện đại.
+                        </p>
+
+                        <!-- contact information -->
+                        <address class="author-contact">
+                            <p>
+                                Email:
+                                <a href="mailto:nguyenngocson30102003@gmail.com">
+                                    nguyenngocson30102003@gmail.com
+                                </a>
+                            </p>
+
+                            <p>
+                                Github:
+                                <a
+                                    href="https://github.com/SonCryptoz"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    github.com/SonCryptoz
+                                </a>
+                            </p>
+                        </address>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+                BACK TO TOP
+            ========================== -->
+            <div class="back-top-wrapper">
+                <a href="#top" class="back-to-top-link"> Lên đầu trang </a>
+            </div>
+        </main>
+
+        <!-- =========================
+            FOOTER SECTION
+        ========================== -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">Nguyen Son</h2>
+
+                        <p class="footer-description">
+                            Xây dựng các trang web hiện đại và tối ưu.
+                        </p>
+                    </div>
+
+                    <!-- social links -->
+                    <div class="footer-socials">
+                        <a
+                            href="https://www.facebook.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-facebook"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-instagram"></i>
+                        </a>
+
+                        <a
+                            href="https://x.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-twitter"></i>
+                        </a>
+
+                        <a
+                            href="http://github.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-github"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2026 Nguyen Son. All rights reserved.
+                    </p>
+
+                    <a href="#top" class="back-to-top"> Lên đầu trang </a>
+                </div>
+
+                <!-- TODO: thêm form đăng ký newsletter -->
+            </div>
+        </footer>
+
+        <!-- Prism.js initialization -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    </body>
+</html>

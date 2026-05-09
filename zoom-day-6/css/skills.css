@@ -1,0 +1,226 @@
+/* =========================
+    HERO SECTION
+========================= */
+
+.skills-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 120px 20px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #86f6f2, #1d41b6, #111827);
+}
+
+.skills-hero-content {
+    max-width: 900px;
+}
+
+.skills-hero-subtitle {
+    margin-bottom: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #bfdbfe;
+}
+
+.skills-hero-title {
+    margin: 0 0 24px;
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+.skills-hero-description {
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #dbeafe;
+}
+
+.skills-hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* =========================
+    TECHNICAL SKILLS
+========================= */
+
+.technical-skills-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.technical-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.technical-skill-card {
+    padding: 36px 30px;
+    border-radius: 24px;
+    background-color: #f9fafb;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.technical-skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 24px;
+    border-radius: 18px;
+    font-size: 40px;
+    color: #2563eb;
+    background-color: #dbeafe;
+}
+
+.technical-skill-title {
+    margin: 0 0 18px;
+    font-size: 28px;
+    color: #111827;
+}
+
+.technical-skill-description {
+    margin-bottom: 20px;
+    color: #4b5563;
+}
+
+.technical-skill-level {
+    margin: 0;
+    font-size: 15px;
+    color: #6b7280;
+}
+
+.technical-skill-level strong {
+    color: #2563eb;
+}
+
+/* =========================
+    TOOLS SECTION
+========================= */
+
+.tools-section {
+    padding: 100px 20px;
+    background-color: #f3f4f6;
+}
+
+.tools-list-wrapper {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tool-item code {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-size: 16px;
+    color: #2563eb;
+    background-color: white;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+    CERTIFICATES SECTION
+========================= */
+
+.certificates-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.certificates-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.certificate-card {
+    padding: 32px;
+    border-radius: 24px;
+    background-color: #f3f4f6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+}
+
+.certificate-title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.certificate-organization,
+.certificate-year {
+    margin-bottom: 14px;
+    color: #4b5563;
+}
+
+.certificate-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.certificate-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+    LEARNING SECTION
+========================= */
+
+.learning-section {
+    padding: 100px 20px;
+    background-color: #eff6ff;
+}
+
+.learning-content {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.learning-text {
+    margin-bottom: 24px;
+    padding: 28px;
+    border-left: 5px solid #2563eb;
+    border-radius: 18px;
+    font-size: 18px;
+    background-color: white;
+    color: #374151;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+    ACTIVE NAVIGATION
+========================= */
+
+.nav-link.active {
+    color: #2563eb;
+    background-color: #eff6ff;
+}

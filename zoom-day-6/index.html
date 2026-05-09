@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="vi" id="top">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+
+        <!-- MDI Lib -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/base.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/home.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
+    </head>
+
+    <body>
+        <!-- =========================
+            HEADER SECTION
+        ========================== -->
+        <header class="header">
+            <div class="header-container">
+                <a href="./index.html" class="logo">
+                    <span class="logo-name">Nguyen Son</span>
+                </a>
+
+                <!-- menu điều hướng -->
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">
+                                <i class="mdi mdi-home nav-icon"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./pages/about.html" class="nav-link">
+                                <i class="mdi mdi-account nav-icon"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./pages/skills.html" class="nav-link">
+                                <i
+                                    class="mdi mdi-lightbulb-on-outline nav-icon"
+                                ></i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./pages/projects.html" class="nav-link">
+                                <i class="mdi mdi-folder-outline nav-icon"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./pages/blog.html" class="nav-link">
+                                <i
+                                    class="mdi mdi-note-text-outline nav-icon"
+                                ></i>
+                                <span>Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./pages/contact.html" class="nav-link">
+                                <i class="mdi mdi-email-outline nav-icon"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- =========================
+            MAIN SECTION
+        ========================== -->
+        <main class="main-content">
+            <!-- =========================
+                HERO SECTION
+            ========================== -->
+            <section class="hero-section">
+                <div class="hero-background">
+                    <img
+                        src="./images/hero-bg.jpg"
+                        alt="hero background"
+                        width="auto"
+                        height="auto"
+                        class="hero-background-image"
+                    />
+                </div>
+
+                <!-- Lớp phủ cho background -->
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
+                    <p class="hero-subtitle">
+                        Front-end Developer & UI Designer
+                    </p>
+
+                    <h1 class="hero-title">
+                        Xin chào, mình là
+                        <strong>Nguyen Son</strong>
+                    </h1>
+
+                    <p class="hero-description">
+                        <em>
+                            Mình yêu thích xây dựng các giao diện web hiện đại,
+                            responsive và mang lại trải nghiệm người dùng tốt.
+                        </em>
+                    </p>
+
+                    <div class="hero-actions">
+                        <a
+                            href="./pages/projects.html"
+                            class="button primary-button"
+                        >
+                            Xem dự án
+                        </a>
+
+                        <a
+                            href="./files/cv.pdf"
+                            class="button secondary-button"
+                            download
+                        >
+                            Tải CV
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+                ABOUT PREVIEW SECTION
+            ========================== -->
+            <section class="about-preview-section">
+                <div class="section-header">
+                    <h2 class="section-title">Giới thiệu</h2>
+
+                    <p class="section-subtitle">
+                        Một vài thông tin về bản thân
+                    </p>
+                </div>
+
+                <div class="about-preview-content">
+                    <div class="about-image-wrapper">
+                        <img
+                            src="./images/avatar.jpg"
+                            alt="Ảnh đại diện Nguyen Son"
+                            width="auto"
+                            height="auto"
+                            class="about-avatar"
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <div class="about-text-content">
+                        <p class="about-text">
+                            Xin chào! Mình là
+                            <strong>Nguyen Son</strong>. Mình đam mê tạo ra các
+                            website đẹp mắt, hiện đại và có trải nghiệm người
+                            dùng tốt.
+                        </p>
+
+                        <p class="about-text">
+                            Mình thích tìm hiểu về
+                            <em> UI/UX, animation, accessibility </em>
+                            và phát triển giao diện responsive.
+                        </p>
+
+                        <p class="about-text">
+                            Mục tiêu của mình là xây dựng các sản phẩm vừa
+                            <mark>thẩm mỹ</mark>
+                            vừa <mark>hiệu quả</mark> trong thực tế.
+                        </p>
+
+                        <a href="./pages/about.html" class="text-link">
+                            Đọc thêm
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+                SKILLS PREVIEW SECTION
+            ========================== -->
+            <section class="skills-preview-section">
+                <div class="section-header">
+                    <h2 class="section-title">Kỹ năng</h2>
+
+                    <p class="section-subtitle">
+                        Các công nghệ và kỹ năng chính
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- skill item -->
+                    <article class="skill-card">
+                        <img
+                            src="./images/skill-html.png"
+                            alt="skills"
+                            width="auto"
+                            height="auto"
+                            loading="lazy"
+                        />
+
+                        <h3 class="skill-name">HTML5</h3>
+
+                        <p class="skill-description">
+                            Xây dựng cấu trúc web semantic và tối ưu
+                            accessibility.
+                        </p>
+                    </article>
+
+                    <!-- skill item -->
+                    <article class="skill-card">
+                        <img
+                            src="./images/skill-css.png"
+                            alt="skills"
+                            width="auto"
+                            height="auto"
+                            loading="lazy"
+                        />
+
+                        <h3 class="skill-name">CSS3</h3>
+
+                        <p class="skill-description">
+                            Thiết kế giao diện responsive và animation hiện đại.
+                        </p>
+                    </article>
+
+                    <!-- skill item -->
+                    <article class="skill-card">
+                        <img
+                            src="./images/skill-js.png"
+                            alt="skills"
+                            width="auto"
+                            height="auto"
+                            loading="lazy"
+                        />
+                        <h3 class="skill-name">JavaScript</h3>
+
+                        <p class="skill-description">
+                            Xây dựng các chức năng tương tác và dynamic UI.
+                        </p>
+                    </article>
+
+                    <!-- skill item -->
+                    <article class="skill-card">
+                        <img
+                            src="./images/skill-react.png"
+                            alt="skills"
+                            width="auto"
+                            height="auto"
+                            loading="lazy"
+                        />
+
+                        <h3 class="skill-name">React</h3>
+
+                        <p class="skill-description">
+                            Phát triển ứng dụng component-based hiện đại.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="section-action">
+                    <a href="./pages/skills.html" class="button outline-button">
+                        Xem tất cả kỹ năng
+                    </a>
+                </div>
+            </section>
+
+            <!-- =========================
+                PROJECTS PREVIEW SECTION
+            ========================== -->
+            <section class="projects-preview-section">
+                <div class="section-header">
+                    <h2 class="section-title">Dự án nổi bật</h2>
+
+                    <p class="section-subtitle">
+                        Một vài dự án mình đã thực hiện
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- project item -->
+                    <article class="project-card">
+                        <div class="project-thumbnail-wrapper">
+                            <img
+                                src="./images/project-1.jpg"
+                                alt="Dự án portfolio"
+                                width="auto"
+                                height="auto"
+                                class="project-thumbnail"
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Website Portfolio</h3>
+
+                            <p class="project-description">
+                                Website portfolio responsive với giao diện hiện
+                                đại và animation mượt mà.
+                            </p>
+
+                            <p class="project-technologies">
+                                Công nghệ:
+                                <code>HTML5</code>, <code>CSS3</code>,
+                                <code>JavaScript</code>
+                            </p>
+
+                            <a href="./pages/projects.html" class="text-link">
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- project item -->
+                    <article class="project-card">
+                        <div class="project-thumbnail-wrapper">
+                            <img
+                                src="./images/project-2.jpg"
+                                alt="Dự án landing page"
+                                width="auto"
+                                height="auto"
+                                class="project-thumbnail"
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Landing Page</h3>
+
+                            <p class="project-description">
+                                Landing page hiện đại tập trung vào trải nghiệm
+                                người dùng và tối ưu chuyển đổi.
+                            </p>
+
+                            <p class="project-technologies">
+                                Công nghệ:
+                                <code>HTML</code>, <code>CSS Grid</code>,
+                                <code>Figma</code>
+                            </p>
+
+                            <a href="./pages/projects.html" class="text-link">
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- project item -->
+                    <article class="project-card">
+                        <div class="project-thumbnail-wrapper">
+                            <img
+                                src="./images/project-3.jpg"
+                                alt="Dự án dashboard"
+                                width="auto"
+                                height="auto"
+                                class="project-thumbnail"
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Dashboard UI</h3>
+
+                            <p class="project-description">
+                                Giao diện dashboard tương tác với các component
+                                có thể tái sử dụng.
+                            </p>
+
+                            <p class="project-technologies">
+                                Công nghệ:
+                                <code>React</code>, <code>SCSS</code>,
+                                <code>Vite</code>
+                            </p>
+
+                            <a href="./pages/projects.html" class="text-link">
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-action">
+                    <a
+                        href="./pages/projects.html"
+                        class="button outline-button"
+                    >
+                        Xem tất cả dự án
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- =========================
+            FOOTER SECTION
+        ========================== -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">Nguyen Son</h2>
+
+                        <p class="footer-description">
+                            Xây dựng các trang web hiện đại và tối ưu.
+                        </p>
+                    </div>
+
+                    <!-- social links -->
+                    <div class="footer-socials">
+                        <a
+                            href="https://www.facebook.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-facebook"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-instagram"></i>
+                        </a>
+
+                        <a
+                            href="https://x.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-twitter"></i>
+                        </a>
+
+                        <a
+                            href="http://github.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-github"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2026 Nguyen Son. All rights reserved.
+                    </p>
+
+                    <a href="#top" class="back-to-top"> Lên đầu trang </a>
+                </div>
+
+                <!-- TODO: thêm form đăng ký newsletter -->
+            </div>
+        </footer>
+    </body>
+</html>

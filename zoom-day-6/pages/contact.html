@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="vi" id="top">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+
+        <!-- MDI Lib -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/contact.css" />
+        <link rel="stylesheet" href="../css/footer.css" />
+    </head>
+    <body>
+        <!-- =========================
+            HEADER SECTION
+        ========================== -->
+        <header class="header">
+            <div class="header-container">
+                <a href="../index.html" class="logo">
+                    <span class="logo-name">Nguyen Son</span>
+                </a>
+
+                <!-- menu điều hướng -->
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">
+                                <i class="mdi mdi-home nav-icon"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./about.html" class="nav-link">
+                                <i class="mdi mdi-account nav-icon"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./skills.html" class="nav-link">
+                                <i
+                                    class="mdi mdi-lightbulb-on-outline nav-icon"
+                                ></i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./projects.html" class="nav-link">
+                                <i class="mdi mdi-folder-outline nav-icon"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./blog.html" class="nav-link">
+                                <i
+                                    class="mdi mdi-note-text-outline nav-icon"
+                                ></i>
+                                <span>Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./contact.html" class="nav-link">
+                                <i class="mdi mdi-email-outline nav-icon"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- =========================
+            MAIN SECTION
+        ========================== -->
+        <main class="main-content">
+            <!-- =========================
+                CONTACT HERO
+            ========================== -->
+            <section class="contact-hero-section">
+                <div class="contact-hero-content">
+                    <p class="contact-subtitle">Contact Me</p>
+
+                    <h1 class="contact-title">
+                        Liên hệ &
+                        <strong>Hợp tác</strong>    
+                    </h1>
+
+                    <p class="contact-description">
+                        Nếu bạn muốn trao đổi về dự án, hợp tác hoặc tuyển dụng,
+                        hãy gửi tin nhắn cho mình thông qua form bên dưới.
+                    </p>
+                </div>
+            </section>
+
+            <!-- =========================
+                CONTACT CONTENT
+            ========================== -->
+            <section class="contact-content-section">
+                <div class="contact-container">
+                    <!-- =========================
+                        CONTACT FORM
+                    ========================== -->
+                    <section class="contact-form-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Form liên hệ</h2>
+                        </div>
+
+                        <!-- contact form -->
+                        <form action="#" method="POST" class="contact-form">
+                            <!-- =========================
+                                BASIC INFORMATION
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    Thông tin cơ bản
+                                </legend>
+
+                                <!-- full name -->
+                                <div class="form-group">
+                                    <label for="full-name"> Họ và tên </label>
+
+                                    <input
+                                        type="text"
+                                        id="full-name"
+                                        name="full-name"
+                                        required
+                                        minlength="2"
+                                        placeholder="Nguyễn Văn A"
+                                        class="form-input"
+                                    />
+                                </div>
+
+                                <!-- email -->
+                                <div class="form-group">
+                                    <label for="email"> Email </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        placeholder="example@email.com"
+                                        class="form-input"
+                                    />
+                                </div>
+
+                                <!-- phone -->
+                                <div class="form-group">
+                                    <label for="phone"> Số điện thoại </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        pattern="[0-9]{10,11}"
+                                        placeholder="0987654321"
+                                        required
+                                        class="form-input"
+                                    />
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                SUBJECT
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    Chủ đề liên hệ
+                                </legend>
+
+                                <div class="form-group">
+                                    <label for="subject"> Chọn chủ đề </label>
+
+                                    <select
+                                        id="subject"
+                                        name="subject"
+                                        class="form-select"
+                                        required
+                                    >
+                                        <option value="">
+                                            -- Chọn chủ đề --
+                                        </option>
+
+                                        <option value="project">
+                                            Hỏi về dự án
+                                        </option>
+
+                                        <option value="collaboration">
+                                            Hợp tác
+                                        </option>
+
+                                        <option value="recruitment">
+                                            Tuyển dụng
+                                        </option>
+
+                                        <option value="other">Khác</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                PRIORITY
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    Mức độ ưu tiên
+                                </legend>
+
+                                <div class="radio-group">
+                                    <label class="radio-item">
+                                        <input
+                                            type="radio"
+                                            name="priority"
+                                            value="low"
+                                        />
+
+                                        <span> Thấp </span>
+                                    </label>
+
+                                    <label class="radio-item">
+                                        <input
+                                            type="radio"
+                                            name="priority"
+                                            value="medium"
+                                            checked
+                                        />
+
+                                        <span> Trung bình </span>
+                                    </label>
+
+                                    <label class="radio-item">
+                                        <input
+                                            type="radio"
+                                            name="priority"
+                                            value="high"
+                                        />
+
+                                        <span> Cao </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                SERVICES
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    Dịch vụ quan tâm
+                                </legend>
+
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input
+                                            type="checkbox"
+                                            name="services"
+                                            value="web-development"
+                                        />
+
+                                        <span> Web Development </span>
+                                    </label>
+
+                                    <label class="checkbox-item">
+                                        <input
+                                            type="checkbox"
+                                            name="services"
+                                            value="mobile-app"
+                                        />
+
+                                        <span> Mobile App </span>
+                                    </label>
+
+                                    <label class="checkbox-item">
+                                        <input
+                                            type="checkbox"
+                                            name="services"
+                                            value="ui-ux-design"
+                                        />
+
+                                        <span> UI/UX Design </span>
+                                    </label>
+
+                                    <label class="checkbox-item">
+                                        <input
+                                            type="checkbox"
+                                            name="services"
+                                            value="consulting"
+                                        />
+
+                                        <span> Consulting </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                MESSAGE
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    Nội dung tin nhắn
+                                </legend>
+
+                                <div class="form-group">
+                                    <textarea
+                                        name="message"
+                                        rows="6"
+                                        minlength="10"
+                                        required
+                                        placeholder="Nhập tin nhắn của bạn..."
+                                        class="form-textarea"
+                                    ></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                WEBSITE RATING
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    Đánh giá website
+                                </legend>
+
+                                <div class="form-group">
+                                    <label for="rating">
+                                        Đánh giá website này: 1-5 sao
+                                    </label>
+
+                                    <input
+                                        type="range"
+                                        id="rating"
+                                        name="rating"
+                                        min="1"
+                                        max="5"
+                                        value="5"
+                                        class="form-range"
+                                        required
+                                    />
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                FILE UPLOAD
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">
+                                    File đính kèm
+                                </legend>
+
+                                <div class="form-group">
+                                    <label for="attachment">
+                                        Đính kèm CV hoặc tài liệu (nếu có)
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        id="attachment"
+                                        name="attachment"
+                                        accept=".pdf,.doc,.docx"
+                                        class="form-file"
+                                        required
+                                    />
+                                </div>
+                            </fieldset>
+
+                            <!-- =========================
+                                TERMS
+                            ========================== -->
+                            <fieldset class="form-fieldset">
+                                <legend class="form-legend">Điều khoản</legend>
+
+                                <label class="checkbox-item">
+                                    <input
+                                        type="checkbox"
+                                        name="terms"
+                                        required
+                                    />
+
+                                    <span>
+                                        Tôi đồng ý với
+                                        <a href="#"> Chính sách bảo mật </a>
+                                    </span>
+                                </label>
+                            </fieldset>
+
+                            <!-- =========================
+                                FORM ACTIONS
+                            ========================== -->
+                            <div class="form-actions">
+                                <button
+                                    type="submit"
+                                    class="button primary-button"
+                                >
+                                    Gửi tin nhắn
+                                </button>
+
+                                <button
+                                    type="reset"
+                                    class="button outline-button"
+                                >
+                                    Xóa form
+                                </button>
+                            </div>
+
+                            <!-- TODO:Thêm validate bằng JavaScript -->
+                        </form>
+                    </section>
+
+                    <!-- =========================
+                        CONTACT INFORMATION
+                    ========================== -->
+                    <aside class="contact-info-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Thông tin liên hệ</h2>
+                        </div>
+
+                        <!-- address -->
+                        <address class="contact-address">
+                            <p>
+                                <strong>Email:</strong>
+
+                                <a href="mailto:nguyenngocson30102003@gmail.com">
+                                    nguyenngocson30102003@gmail.com
+                                </a>
+                            </p>
+
+                            <p>
+                                <strong>Điện thoại:</strong>
+
+                                <a href="tel:+84987654321"> +84 987 654 321 </a>
+                            </p>
+
+                            <p>
+                                <strong>Địa chỉ:</strong>
+
+                                Số 123 Đường ABC, Quận XYZ, Hải Phòng, Việt Nam
+                            </p>
+                        </address>
+
+                        <!-- social media -->
+                        <div class="contact-socials">
+                            <a
+                                href="https://facebook.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                class="social-link"
+                            >
+                                <i class="mdi mdi-facebook"></i>
+                            </a>
+
+                            <a
+                                href="https://instagram.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                class="social-link"
+                            >
+                                <i class="mdi mdi-instagram"></i>
+                            </a>
+
+                            <a
+                                href="https://x.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Twitter"
+                                class="social-link"
+                            >
+                                <i class="mdi mdi-twitter"></i>
+                            </a>
+
+                            <a
+                                href="https://github.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Github"
+                                class="social-link"
+                            >
+                                <i class="mdi mdi-github"></i>
+                            </a>
+
+                            <a
+                                href="https://linkedin.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                                class="social-link"
+                            >
+                                <i class="mdi mdi-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <!-- =========================
+                            WORKING HOURS
+                        ========================== -->
+                        <div class="working-hours">
+                            <h3 class="working-hours-title">Giờ làm việc</h3>
+
+                            <table class="working-hours-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ngày</th>
+                                        <th>Thời gian</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Thứ 2 - Thứ 6</td>
+
+                                        <td>
+                                            <time datetime="09:00">
+                                                09:00
+                                            </time>
+                                            -
+                                            <time datetime="18:00">
+                                                18:00
+                                            </time>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Thứ 7</td>
+
+                                        <td>
+                                            <time datetime="09:00">
+                                                09:00
+                                            </time>
+                                            -
+                                            <time datetime="12:00">
+                                                12:00
+                                            </time>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Chủ nhật</td>
+
+                                        <td>Nghỉ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- =========================
+                GOOGLE MAPS
+            ========================== -->
+            <section class="map-section">
+                <div class="section-header">
+                    <h2 class="section-title">Vị trí trên bản đồ</h2>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25050.746889235674!2d105.81237008892104!3d21.040054884704094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1778310137013!5m2!1svi!2s"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </section>
+        </main>
+
+        <!-- =========================
+            FOOTER SECTION
+        ========================== -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">Nguyen Son</h2>
+
+                        <p class="footer-description">
+                            Xây dựng các trang web hiện đại và tối ưu.
+                        </p>
+                    </div>
+
+                    <!-- social links -->
+                    <div class="footer-socials">
+                        <a
+                            href="https://www.facebook.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-facebook"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-instagram"></i>
+                        </a>
+
+                        <a
+                            href="https://x.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-twitter"></i>
+                        </a>
+
+                        <a
+                            href="http://github.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-github"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com"
+                            class="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <i class="mdi mdi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2026 Nguyen Son. All rights reserved.
+                    </p>
+
+                    <a href="#top" class="back-to-top"> Lên đầu trang </a>
+                </div>
+
+                <!-- TODO: thêm form đăng ký newsletter -->
+            </div>
+        </footer>
+    </body>
+</html>
