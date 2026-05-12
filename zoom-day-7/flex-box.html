@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox</title>
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./css/reset.css" />
+
+        <!-- Flexbox CSS -->
+        <style>
+            body {
+                background-color: #f5f5f5;
+            }
+
+            /* Align */
+            .main {
+                width: 100%;
+                max-width: 1300px;
+                margin: 0 auto;
+            }
+
+            /*Common CSS*/
+            .wrapper {
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            div[class*="container-"] {
+                display: flex;
+                width: 600px;
+                height: 200px;
+                border: 3px solid red;
+                margin-top: 20px;
+            }
+
+            div[class*="box-"] {
+                width: 60px;
+                height: 60px;
+                background-color: #40b9fa;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+            }
+
+            /* Flex item CSS */
+            
+            /* Container 1 */
+            .container-1 {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* Container 2 */
+            .container-2 {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* Container 3 */
+            .container-3 {
+                flex-direction: column;
+                align-items: center;
+
+                .box-1 {
+                    margin-bottom: 20px;
+                }
+
+                .box-2 {
+                    margin-bottom: 50px;
+                }
+            }
+
+            /* Container 4 */
+            .container-4 {
+                justify-content: center;
+                align-items: center;
+
+                .box-1 {
+                    margin-right: 10px;
+                }
+
+                .box-2 {
+                    margin-right: 40px;
+                }
+            }
+
+            /* Container 5 */
+            .container-5 {
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Container 6 */
+            .container-6 {
+                align-items: flex-start;
+
+                .box-2 {
+                    margin: 0 auto;
+                }
+            }
+
+            /* Container 7 */
+            .container-7 {
+                flex-direction: column;
+                align-items: center;
+
+                .box-1 {
+                    margin-bottom: 60px;
+                }
+
+                .box-2 {
+                    margin-bottom: 20px;
+                }
+            }
+
+            /* Container 8 */
+            .container-8 {
+                align-items: center;
+                
+                .box-2 {
+                    margin: 0 auto;
+                }
+            }
+
+            /* Container 9 */
+            .container-9 {
+                justify-content: center;
+                align-items: center;
+
+                .box-2 {
+                    margin: 0 20px;
+                }
+
+                .box-1 {
+                    margin-top: -60px;
+                    /* hoặc dùng translate để không ảnh hưởng layout*/
+                    /* transform: translateY(-30px); */
+                }
+
+                .box-3 {
+                    margin-top: 60px;
+                    /* hoặc dùng translate để không ảnh hưởng layout*/
+                    /* transform: translateY(30px); */
+                }
+            }
+
+            /* Container 10 */
+            .container-10 {
+                justify-content: space-between;
+
+                .box-1 {
+                    margin-bottom: auto;
+                    /* hoặc dùng align-self */
+                    /* align-self: flex-start; */
+                }
+
+                .box-2 {
+                    margin: auto 0;
+                    /* hoặc dùng align-self */
+                    /* align-self: center; */
+
+                }
+
+                .box-3 {
+                    margin-top: auto;
+                    /* hoặc dùng align-self */
+                    /* align-self: flex-end; */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Advanced Flexbox</h1>
+
+            <div class="wrapper">
+                <!-- Container-1 -->
+                <h2>Container 1</h2>
+                <div class="container-1">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-2 -->
+                <h2>Container 2</h2>
+                <div class="container-2">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-3 -->
+                <h2>Container 3</h2>
+                <div class="container-3">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-4 -->
+                <h2>Container 4</h2>
+                <div class="container-4">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-5 -->
+                <h2>Container 5</h2>
+                <div class="container-5">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-6 -->
+                <h2>Container 6</h2>
+                <div class="container-6">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-7 -->
+                <h2>Container 7</h2>
+                <div class="container-7">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-8 -->
+                <h2>Container 8</h2>
+                <div class="container-8">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-9 -->
+                <h2>Container 9</h2>
+                <div class="container-9">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- Container-10 -->
+                <h2>Container 10</h2>
+                <div class="container-10">
+                    <div class="box-1">1</div>
+                    <div class="box-2">2</div>
+                    <div class="box-3">3</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

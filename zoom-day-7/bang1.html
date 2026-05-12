@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bảng 1</title>
+        <style>
+            body {
+                box-sizing: border-box;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Open Sans",
+                    "Helvetica Neue",
+                    sans-serif;
+            }
+
+            /* CSS for table and td*/
+            table {
+                border-collapse: collapse;
+
+                td {
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1" cellspacing="0" cellpadding="6" width="100%">
+            <!-- Head -->
+            <thead>
+                <tr>
+                    <th rowspan="4">Khối</th>
+                    <th rowspan="4">Hạng mục</th>
+                    <th rowspan="4">Mã</th>
+                    <th colspan="12">Kế hoạch triển khai Năm 2026</th>
+                    <th colspan="3">Ngân sách</th>
+                    <th rowspan="4">Rủi ro</th>
+                    <th rowspan="4">Trạng thái</th>
+                </tr>
+                <tr>
+                    <th colspan="6">H1</th>
+                    <th colspan="6">H2</th>
+                    <th rowspan="3">CapEx</th>
+                    <th rowspan="3">OpEx</th>
+                    <th rowspan="3">Tổng</th>
+                </tr>
+                <tr>
+                    <th colspan="3">Q1</th>
+                    <th colspan="3">Q2</th>
+                    <th colspan="3">Q3</th>
+                    <th colspan="3">Q4</th>
+                </tr>
+                <tr>
+                    <th>T.01</th>
+                    <th>T.02</th>
+                    <th>T.03</th>
+                    <th>T.04</th>
+                    <th>T.05</th>
+                    <th>T.06</th>
+                    <th>T.07</th>
+                    <th>T.08</th>
+                    <th>T.09</th>
+                    <th>T.10</th>
+                    <th>T.11</th>
+                    <th>T.12</th>
+                </tr>
+            </thead>
+
+            <!-- Body -->
+            <tbody>
+                <tr>
+                    <th rowspan="6">Giao thông</th>
+                    <th>Vé điện tử liên tuyến</th>
+                    <th>GT-01</th>
+                    <td>Khảo sát</td>
+                    <td>Thiết kế</td>
+                    <td>POC</td>
+                    <td>Dev-1</td>
+                    <td>Dev-2</td>
+                    <td>UAT</td>
+                    <td>Pilot</td>
+                    <td>Mở rộng</td>
+                    <td>__</td>
+                    <td>Ổn định</td>
+                    <td>Chuyển giao</td>
+                    <td>Đánh giá</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>16</td>
+                    <td>Trung</td>
+                    <td>Đang làm</td>
+                </tr>
+                <tr>
+                    <th>Camera phạt nguội AI</th>
+                    <th>GT-02</th>
+                    <td>Chuẩn dữ liệu</td>
+                    <td>__</td>
+                    <td>Đấu thầu</td>
+                    <td>Lắp đặt</td>
+                    <td>Huấn luyện</td>
+                    <td>UAT</td>
+                    <td>Go-live</td>
+                    <td>__</td>
+                    <td>Tối ưu</td>
+                    <td>__</td>
+                    <td>Mở rộng</td>
+                    <td>Kiểm toán</td>
+                    <td>18</td>
+                    <td>6</td>
+                    <td>24</td>
+                    <td>Cao</td>
+                    <td>Phụ thuộc</td>
+                </tr>
+                <tr>
+                    <th>Trung tâm điều hành</th>
+                    <th>GT-03</th>
+                    <td colspan="2">Kiến trúc</td>
+                    <td>Thiết bị</td>
+                    <td>__</td>
+                    <td>Setup</td>
+                    <td>Tích hợp</td>
+                    <td>Vận hành</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>BCP</td>
+                    <td>Diễn tập</td>
+                    <td>Nghiệm thu</td>
+                    <td>30</td>
+                    <td>10</td>
+                    <td>40</td>
+                    <td>Cao</td>
+                    <td>Chờ phê duyệt</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Bảo trì đường bộ</th>
+                    <th>GT-04A</th>
+                    <td>Khảo sát</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td colspan="2">Sửa chữa</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>Bảo trì</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>Kiểm tra</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>15</td>
+                    <td>Thấp</td>
+                    <td>Đúng tiến độ</td>
+                </tr>
+                <tr>
+                    <th>GT-04B</th>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>Giám sát</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td colspan="3">Bảo trì định kỳ</td>
+                    <td colspan="3">Tăng cường Q4</td>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>11</td>
+                    <td>Trung</td>
+                    <td>Đang làm</td>
+                </tr>
+                <tr>
+                    <th rowspan="7">Y tế</th>
+                    <th>Hồ sơ sức khỏe điện tử</th>
+                    <th>YT-01</th>
+                    <td>Chuẩn HL7</td>
+                    <td>__</td>
+                    <td>Thiết kế</td>
+                    <td>Dev-1</td>
+                    <td>Dev-2</td>
+                    <td>UAT</td>
+                    <td>Pilot</td>
+                    <td>__</td>
+                    <td>Mở rộng</td>
+                    <td>Tối ưu</td>
+                    <td>__</td>
+                    <td>Đánh giá</td>
+                    <td>14</td>
+                    <td>9</td>
+                    <td>23</td>
+                    <td>Trung</td>
+                    <td>Đang làm</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">An toàn dữ liệu</th>
+                    <th>YT-04A</th>
+                    <td colspan="3">Đánh giá rò rỉ</td>
+                    <td colspan="3">Mã hóa & phân quyền</td>
+                    <td colspan="3">Giám sát truy cập</td>
+                    <td colspan="3">Kiểm toán độc lập</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>Cao</td>
+                    <td>Đang làm</td>
+                </tr>
+                <tr>
+                    <th>Chuyển đổi HIS</th>
+                    <th>YT-05</th>
+                    <td colspan="2">Rà soát</td>
+                    <td>Đấu thầu</td>
+                    <td>Triển khai</td>
+                    <td>__</td>
+                    <td>Tích hợp</td>
+                    <td>UAT</td>
+                    <td>Go-live</td>
+                    <td>__</td>
+                    <td>Ổn định</td>
+                    <td>__</td>
+                    <td>Nghiệm thu</td>
+                    <td>20</td>
+                    <td>12</td>
+                    <td>32</td>
+                    <td>Cao</td>
+                    <td>Chờ phê duyệt</td>
+                </tr>
+                <tr>
+                    <th>Tổng hợp Y tế</th>
+                    <th>YT-SUM</th>
+                    <td colspan="12">
+                        Ưu tiên liên thông dữ liệu & an toàn; theo dõi KPI: thời
+                        gian chờ, tỷ lệ đặt lịch thành công, sự cố bảo mật
+                    </td>
+                    <td colspan="3">Tổng: 92</td>
+                    <td>__</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <th rowspan="5">Giáo dục</th>
+                    <th>LMS cho THPT</th>
+                    <th>GD-01</th>
+                    <td>Khảo sát</td>
+                    <td>__</td>
+                    <td>Thiết kế</td>
+                    <td>Dev-1</td>
+                    <td>Dev-2</td>
+                    <td>UAT</td>
+                    <td>Pilot</td>
+                    <td>Mở rộng</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>Thi online</td>
+                    <td>Ổn định</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>9</td>
+                    <td>Thấp</td>
+                    <td>Đang làm</td>
+                </tr>
+                <tr>
+                    <th>Thi trực tuyến chống gian lận</th>
+                    <th>GD-02</th>
+                    <td>__</td>
+                    <td>POC</td>
+                    <td>__</td>
+                    <td colspan="2">Tích hợp</td>
+                    <td>UAT</td>
+                    <td>Go-live</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>Tối ưu</td>
+                    <td>__</td>
+                    <td>Đánh giá</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>Trung</td>
+                    <td>Phụ thuộc</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Thư viện số</th>
+                    <th>GD-03A</th>
+                    <td colspan="3">Số hóa tài liệu</td>
+                    <td colspan="3">Chuẩn metadata</td>
+                    <td colspan="3">Cổng tra cứu</td>
+                    <td colspan="3">Mở rộng trường</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>Thấp</td>
+                    <td>Đang làm</td>
+                </tr>
+                <tr>
+                    <th>GD-03B</th>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td>__</td>
+                    <td colspan="3">Bản quyền nội dung</td>
+                    <td colspan="3">Gia hạn bằng năm</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>Cao</td>
+                    <td>Lặp hằng năm</td>
+                </tr>
+                <tr>
+                    <th>Tổng hợp giáo dục</th>
+                    <th>GD-SUM</th>
+                    <td colspan="12">
+                        Ưu tiên dạy-học số; theo dõi KPI: tỉ lệ truy cập,
+                        uptime, tỉ lệ hoàn thành bài
+                    </td>
+                    <td colspan="3">Tổng: 35</td>
+                    <td>__</td>
+                    <td>OK</td>
+                </tr>
+            </tbody>
+
+            <!-- Foot -->
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Tổng quan ngân sách</strong></td>
+                    <td colspan="6">
+                        H1: Phân tích, chuẩn hóa, triển khai phần mềm
+                    </td>
+                    <td colspan="6">
+                        H2: Mở rộng, vận hành, kiểm toán & tối ưu
+                    </td>
+                    <td colspan="3"><strong>233</strong></td>
+                    <td><strong>Ưu tiên</strong></td>
+                    <td><strong>Theo dõi</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
