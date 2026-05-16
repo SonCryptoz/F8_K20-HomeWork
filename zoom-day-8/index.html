@@ -141,26 +141,73 @@
                     }
 
                     /* notification and burger */
-                    img:first-child,
-                    img:nth-child(2),
-                    img:last-child {
+                    .item-3-noti {
+                        padding: 10px;
+                        width: 100%;
+                        font-size: 0.6rem;
+                        display: grid;
+                        align-items: center;
+                        grid-template-columns: 1fr 3fr 2fr;
+                        grid-template-rows: 1fr;
+                        background-color: #60738e;
+                        color: white;
+                        border-radius: 16px;
+                        position: absolute;
+                        left: auto;
+                        right: auto;
+
+                        &.direction-1 {
+                            z-index: 3;
+                            top: 1px;
+                            scale: 0.9;
+                        }
+
+                        &.direction-2 {
+                            top: 60px;
+                            z-index: 2;
+                            scale: 0.8;
+                        }
+                    }
+
+                    .noti-item {
+                        width: fit-content;
+                    }
+
+                    .noti-2 h3,
+                    .noti-2 p {
+                        line-height: 1.6;
+                    }
+
+                    .noti-3 {
+                        justify-self: flex-end;
+                        text-align: right;
+                    }
+
+                    .noti-3 h3 {
+                        color: #9bc2f7;
+                        font-weight: 200;
+                    }
+
+                    .noti-3 > img {
+                        width: 48px;
+                        height: 48px;
+                        object-fit: cover;
+                        border-radius: 12px;
+                        margin-left: auto;
+                    }
+
+                    .mappin {
+                        width: 32px;
+                        height: 32px;
+                        padding: 8px;
+                        background-color: #d7593f;
+                        border-radius: 8px;
+                    }
+
+                    .burger {
                         width: 100%;
                         position: absolute;
                         filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
-                    }
-
-                    img:first-child {
-                        top: -60%;
-                        z-index: 2;
-                    }
-
-                    img:nth-child(2) {
-                        top: -30%;
-                        scale: 0.95;
-                        z-index: 1;
-                    }
-
-                    img:last-child {
                         width: 60%;
                         top: 82%;
                         left: 50%;
@@ -176,7 +223,7 @@
                     position: relative;
 
                     h2 {
-                        padding: 28px 20px;
+                        padding: 20px;
                     }
 
                     /* Oval */
@@ -205,30 +252,114 @@
                     }
 
                     /* menu item */
-                    img:first-of-type,
-                    img:nth-of-type(2),
-                    img:last-of-type {
+                    .item-4-menu {
                         width: 100%;
+                        padding: 12px;
+                        display: grid;
+                        align-items: flex-start;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr;
+                        background-color: white;
+                        color: black;
+                        border-radius: 24px;
+                        font-size: 0.6rem;
                         filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
                         position: absolute;
+                        left: auto;
+                        right: auto;
+                        z-index: 1;
                     }
 
-                    img:first-of-type {
-                        top: 60px;
-                        z-index: 1;
+                    .item-4-menu:first-of-type {
+                        top: 10%;
                         scale: 0.9;
                     }
 
-                    img:nth-of-type(2) {
-                        top: 210px;
-                        z-index: 1;
+                    .item-4-menu:nth-of-type(2) {
+                        top: 42%;
                         scale: 0.8;
                     }
 
-                    img:last-of-type {
-                        top: 343px;
-                        z-index: 1;
+                    .item-4-menu:last-of-type {
+                        top: 69.5%;
                         scale: 0.7;
+                    }
+
+                    /* button */
+                    .item-4-menu .menu-button {
+                        content: "";
+                        text-align: center;
+                        line-height: 3.7;
+                        font-weight: 900;
+                        color: var(--light-orange-color);
+                        border: 1px solid var(--light-orange-color);
+                        position: absolute;
+                        right: 7%;
+                        bottom: -10%;
+                        width: 100px;
+                        height: 35px;
+                        border-radius: 8px;
+                        background-color: #f9ebeb;
+                    }
+
+                    .item-4-menu .menu-button::after {
+                        content: "+";
+                        font-weight: 200;
+                        font-size: 1.6rem;
+                        line-height: 0;
+                        position: absolute;
+                        right: 4px;
+                        top: 10px;
+                        color: var(--light-orange-color);
+                    }
+
+                    .menu-status span:first-child {
+                        vertical-align: middle;
+                        display: inline-block;
+                        height: 16px;
+                        width: 16px;
+                        text-align: center;
+                        color: #00a912;
+                        line-height: 0.7;
+                        font-size: 1rem;
+                        border-radius: 4px;
+                        border: 1px solid #00a912;
+                    }
+
+                    .menu-status span:last-child {
+                        padding: 4px 3px;
+                        background-color: #de981b;
+                        vertical-align: middle;
+                        color: white;
+                        border-radius: 6px;
+                    }
+
+                    .menu-1 {
+                        line-height: 2;
+                    }
+
+                    .menu-1 p {
+                        color: #7e7e7e;
+                        line-height: 1.2;
+                    }
+
+                    .menu-1 span {
+                        color: #787878;
+                        font-weight: 700;
+                    }
+
+                    .menu-2 img {
+                        justify-self: end;
+                        width: 80%;
+                        border-radius: 24px;
+                    }
+
+                    .mappin {
+                        width: 18px;
+                        height: 18px;
+                        padding: 8px;
+                        background-color: #d7593f;
+                        border-radius: 12px;
                     }
                 }
 
@@ -580,11 +711,111 @@
                         z-index: 1;
                     }
 
-                    img {
-                        padding-inline: 16px;
+                    /* Ratings Card */
+                    .item-8-rating {
                         width: 100%;
+                        scale: 0.9;
+                        background-color: white;
+                        color: black;
+                        border-radius: 20px;
+                        font-size: 0.7rem;
+                        padding: 2px 12px;
                         position: relative;
-                        z-index: 1;
+                        bottom: 18px;
+                        z-index: 2;
+                    }
+
+                    .item-8-rating .header,
+                    .item-8-rating .footer {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: center;
+                    }
+
+                    .item-8-rating p {
+                        line-height: 1.5;
+                        margin: 6px 0;
+                        color: #586377;
+                    }
+
+                    .item-8-rating .header-left img {
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        vertical-align: middle;
+                        margin-right: 4px;
+                    }
+
+                    .item-8-rating .header-left span {
+                        vertical-align: middle;
+                        font-weight: 700;
+                    }
+
+                    .item-8-rating .header .header-right {
+                        justify-self: end;
+                    }
+
+                    .item-8-rating .header-right p:first-child {
+                        color: white;
+                        width: fit-content;
+                        padding: 6px 4px;
+                        background-color: #1a5733;
+                        border-radius: 4px;
+                        justify-self: end;
+                        margin: 4px 0;
+                        line-height: 0.6;
+                    }
+
+                    .item-8-rating .header-right p:last-child {
+                        margin: 4px 0;
+                    }
+
+                    .item-8-rating .header-right span,
+                    .item-8-rating .header-right svg {
+                        vertical-align: middle;
+                        display: inline-block;
+                        line-height: 1;
+                    }
+
+                    .item-8-rating .header-right svg {
+                        width: 16px;
+                    }
+
+                    .item-8-rating .header-right .decor {
+                        text-decoration: underline dotted;
+                        font-weight: 500;
+                    }
+
+                    .item-8-rating .footer-left p {
+                        color: #9E9FA7;
+                    }
+
+                    .item-8-rating .footer-left .process {
+                        display: inline-block;
+                        margin-right: 12px;
+                        width: 60%;
+                        height: 6px;
+                        background-color: #ececec;
+                        border-radius: 10px;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            text-align: right;
+                            width: 85%;
+                            height: inherit;
+                            background-color: #0f8145;
+                            border-radius: inherit;
+                        }
+                    }
+
+                    .item-8-rating .footer-right {
+                        justify-self: end;
+                    }
+
+                    .item-8-rating .footer-right {
+                        font-size: 2.3rem;
                     }
                 }
 
@@ -672,23 +903,126 @@
 
                     <!-- Card 3 -->
                     <div class="item-card item-3">
+                        <!-- Notification card -->
+                        <div class="item-3-noti direction-1">
+                            <div class="noti-item noti-1">
+                                <div class="mappin">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                    >
+                                        <path
+                                            fill="rgb(255, 255, 255)"
+                                            d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="noti-item noti-2">
+                                <h3>Restro Beast Restaurant</h3>
+                                <p>
+                                    Welcome to RESTRO! Explore our delicious
+                                    dishes now!😍
+                                </p>
+                            </div>
+                            <div class="noti-item noti-3">
+                                <h3>JUST NOW</h3>
+                                <img src="./img/card-burger.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="item-3-noti direction-2">
+                            <div class="noti-item noti-1">
+                                <div class="mappin">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                    >
+                                        <path
+                                            fill="rgb(255, 255, 255)"
+                                            d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="noti-item noti-2">
+                                <h3>Restro Beast Restaurant</h3>
+                                <p>Order Placed, food is on the way!</p>
+                            </div>
+                            <div class="noti-item noti-3">
+                                <h3>JUST NOW</h3>
+                                <img src="./img/card-burger.png" alt="" />
+                            </div>
+                        </div>
                         <img
-                            src="./img/card-3-img-noti.png"
+                            class="burger"
+                            src="./img/card-burger.png"
                             alt="notification"
                         />
-                        <img
-                            src="./img/card-3-img-noti.png"
-                            alt="notification"
-                        />
-                        <img src="./img/card-burger.png" alt="notification" />
                     </div>
 
                     <!-- Card 4 -->
                     <div class="item-card item-4">
                         <h2>Special Menu</h2>
-                        <img src="./img/card-menu.png" alt="notification" />
-                        <img src="./img/card-menu.png" alt="notification" />
-                        <img src="./img/card-menu.png" alt="notification" />
+
+                        <!-- Menu card -->
+                        <div class="item-4-menu">
+                            <div class="menu-item menu-1">
+                                <div class="menu-status">
+                                    <span>●</span>
+                                    <span>Hot Spicy</span>
+                                </div>
+                                <h3>Philly Cheese Steak Pizza</h3>
+                                <h3>$8.99</h3>
+                                <p>
+                                    Tender slices of steak, fresh onions, fresh
+                                    green peppers and fresh mushrooms with
+                                    provolone...
+                                </p>
+                                <span>read more</span>
+                            </div>
+                            <div class="menu-item menu-2">
+                                <img src="./img/card-menu-1.png" alt="menu-1" />
+                            </div>
+                            <div class="menu-button">ADD</div>
+                        </div>
+                        <div class="item-4-menu">
+                            <div class="menu-item menu-1">
+                                <div class="menu-status">
+                                    <span>●</span>
+                                    <span>Hot Spicy</span>
+                                </div>
+                                <h3>Cheese Burger</h3>
+                                <h3>$7.50</h3>
+                                <p>
+                                    Tender slices of steak, fresh onions, fresh
+                                    green peppers and fresh mushrooms.
+                                </p>
+                            </div>
+                            <div class="menu-item menu-2">
+                                <img src="./img/card-burger.png" alt="menu-1" />
+                            </div>
+                            <div class="menu-button">ADD</div>
+                        </div>
+                        <div class="item-4-menu">
+                            <div class="menu-item menu-1">
+                                <div class="menu-status">
+                                    <span>●</span>
+                                    <span>Hot Spicy</span>
+                                </div>
+                                <h3>Potato Fries</h3>
+                                <h3>$4.50</h3>
+                                <p>
+                                    Tender slices of steak, fresh onions, fresh
+                                    green peppers and fresh mushrooms with
+                                    provolone...
+                                </p>
+                                <span>read more</span>
+                            </div>
+                            <div class="menu-item menu-2">
+                                <img src="./img/card-menu-3.png" alt="menu-1" />
+                            </div>
+                            <div class="menu-button">ADD</div>
+                        </div>
                     </div>
 
                     <!-- Card 5 -->
@@ -754,7 +1088,47 @@
                     <!-- Card 8 -->
                     <div class="item-card item-8">
                         <h2>Ratings</h2>
-                        <img src="./img/card-ratings.png" alt="ratings" />
+                        <div class="item-8-rating">
+                            <div class="header">
+                                <div class="header-left">
+                                    <img
+                                        src="./img/card-avatar.png"
+                                        alt="avatar"
+                                    />
+                                    <span>Peter Williams</span>
+                                </div>
+                                <div class="header-right">
+                                    <p>5 ⭐</p>
+                                    <p>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 640 640"
+                                        >
+                                            <path
+                                                fill="rgb(88, 99, 119)"
+                                                d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z"
+                                            />
+                                        </svg>
+                                        <span class="decor"
+                                            >Verified order</span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                The food was fresh, delicious, and beautifully
+                                presented. The service was quick, and the vegan
+                                options were a delightful suprise!
+                            </p>
+                            <div class="footer">
+                                <div class="footer-left">
+                                    <p>2 months ago</p>
+                                    <div class="process"></div>
+                                    <span>4.5/5⭐</span>
+                                </div>
+                                <div class="footer-right">🌟</div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Card 9 -->
