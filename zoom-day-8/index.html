@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoom Day 8</title>
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./css/reset.css" />
+
+        <!-- Internal CSS -->
+        <style>
+            /* Variables */
+            :root {
+                --orange-color: #ff6400;
+                --light-orange-color: #ff7b26;
+                --light-blue-color: #8bb8f6;
+                --black-color: #000000;
+                --background-color: orange;
+            }
+
+            html {
+                font-family: "Be Vietnam Pro", sans-serif;
+            }
+
+            /* Base */
+            .container {
+                width: 100%;
+                max-width: 1440px;
+                height: 1039px;
+                margin: 0 auto;
+
+                h1 {
+                    text-align: center;
+                }
+            }
+
+            .wrapper {
+                background-color: var(--black-color);
+                padding: 18px;
+                border-radius: 44px;
+            }
+
+            /* Grid container */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                gap: 18px;
+
+                /* CCS common card */
+                .item-card {
+                    color: white;
+                    border-radius: 32px;
+                    overflow: hidden;
+                }
+
+                /* Card 1 */
+                .item-1 {
+                    background-color: var(--orange-color);
+                    grid-row: span 2;
+                    position: relative;
+
+                    img {
+                        width: 400px;
+                        height: 400px;
+                        object-fit: contain;
+                        position: relative;
+                        top: -5px;
+                        right: -28px;
+                        z-index: 2;
+                    }
+
+                    /* Circle */
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 400px;
+                        height: 400px;
+                        border-radius: 50%;
+                        background-color: var(--light-orange-color);
+                        position: absolute;
+                        top: -1%;
+                        right: -50%;
+                        z-index: 1;
+                    }
+
+                    .card-1-title {
+                        margin: 0 28px 28px;
+                    }
+
+                    p {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                /* Card 2 */
+                .item-2 {
+                    background-color: var(--light-blue-color);
+                    grid-row: span 1;
+                    position: relative;
+
+                    img {
+                        width: 65%;
+                        position: absolute;
+                        background-color: transparent;
+                        top: -20%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        filter: drop-shadow(0px 16px 10px rgba(0, 0, 0, 0.3));
+                    }
+                }
+
+                /* Card 3 */
+                .item-3 {
+                    background-color: var(--light-blue-color);
+                    grid-row: span 1;
+                    position: relative;
+
+                    /* Circle */
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 400px;
+                        height: 400px;
+                        border-radius: 50%;
+                        background-color: #9bc2f7;
+                        position: absolute;
+                        top: -1%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                    }
+
+                    /* notification and burger */
+                    img:first-child,
+                    img:nth-child(2),
+                    img:last-child {
+                        width: 100%;
+                        position: absolute;
+                        filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+                    }
+
+                    img:first-child {
+                        top: -60%;
+                        z-index: 2;
+                    }
+
+                    img:nth-child(2) {
+                        top: -30%;
+                        scale: 0.95;
+                        z-index: 1;
+                    }
+
+                    img:last-child {
+                        width: 60%;
+                        top: 82%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 3;
+                    }
+                }
+
+                /* Card 4 */
+                .item-4 {
+                    background-color: var(--orange-color);
+                    grid-row: span 2;
+                    position: relative;
+
+                    h2 {
+                        padding: 28px 20px;
+                    }
+
+                    /* Oval */
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 400px;
+                        height: 500px;
+                        border-radius: 50%;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                    }
+
+                    &::before {
+                        background-color: var(--light-orange-color);
+                        top: 90%;
+                        left: 50%;
+                    }
+
+                    &::after {
+                        background-color: #ff8d43;
+                        top: 110%;
+                        left: 50%;
+                    }
+
+                    /* menu item */
+                    img:first-of-type,
+                    img:nth-of-type(2),
+                    img:last-of-type {
+                        width: 100%;
+                        filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+                        position: absolute;
+                    }
+
+                    img:first-of-type {
+                        top: 60px;
+                        z-index: 1;
+                        scale: 0.9;
+                    }
+
+                    img:nth-of-type(2) {
+                        top: 210px;
+                        z-index: 1;
+                        scale: 0.8;
+                    }
+
+                    img:last-of-type {
+                        top: 343px;
+                        z-index: 1;
+                        scale: 0.7;
+                    }
+                }
+
+                /* Card 5 */
+                .item-5 {
+                    background-color: var(--orange-color);
+                    grid-row: span 2;
+                    grid-column: span 2;
+                    padding: 36px 40px;
+                    position: relative;
+
+                    /* Text */
+                    &::before,
+                    &::after {
+                        font-size: 8rem;
+                        font-weight: 900;
+                        color: var(--light-orange-color);
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    &::before {
+                        content: "REST";
+                        top: -5%;
+                        right: 28%;
+                    }
+
+                    &::after {
+                        content: "BEAST";
+                        top: 28%;
+                        right: 28%;
+                    }
+
+                    /* Title */
+                    .item-5-title > * {
+                        line-height: 1.5;
+                    }
+
+                    .item-5-title p {
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+
+                    .item-5-title span {
+                        font-weight: 200;
+                    }
+
+                    /* Chart */
+                    .item-5-chart {
+                        display: grid;
+                        grid-template-columns: repeat(7, 1fr);
+                        align-items: flex-end;
+                        padding-inline: 28px;
+                        gap: 5px;
+                        z-index: 1;
+                        position: relative;
+                        bottom: -28px;
+                    }
+
+                    .chart-item {
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    .chart-item p {
+                        font-weight: 200;
+                    }
+
+                    .chart-col {
+                        background-color: white;
+                        margin-bottom: 12px;
+                        border-radius: 18px;
+                    }
+
+                    .chart-col-1 {
+                        height: 150px;
+                    }
+
+                    .chart-col-2 {
+                        height: 180px;
+                    }
+
+                    .chart-col-3 {
+                        height: 210px;
+                        background-color: var(--light-blue-color);
+                    }
+
+                    .chart-col-4 {
+                        height: 190px;
+                    }
+
+                    .chart-col-5 {
+                        height: 260px;
+                        background-color: var(--light-blue-color);
+                    }
+
+                    .chart-col-6 {
+                        height: 200px;
+                    }
+
+                    .chart-col-7 {
+                        height: 220px;
+                    }
+
+                    /* Circle */
+                    .circle {
+                        position: absolute;
+                        bottom: -16%;
+                        left: -10%;
+                        width: 255px;
+                        height: 255px;
+                        border-radius: 50%;
+                        background-color: var(--light-orange-color);
+                    }
+                }
+
+                /* Card 6 */
+                .item-6 {
+                    background-color: var(--light-blue-color);
+                    grid-row: span 2;
+                    position: relative;
+
+                    /* Circle */
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        border-radius: 50%;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                    }
+
+                    &::before {
+                        width: 400px;
+                        height: 400px;
+                        background-color: #9cc3f7;
+                        top: 35%;
+                        left: 50%;
+                    }
+
+                    &::after {
+                        width: 260px;
+                        height: 260px;
+                        background-color: #abccf8;
+                        top: 34%;
+                        left: 50%;
+                    }
+
+                    img {
+                        width: 90%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 1;
+                    }
+
+                    p {
+                        position: absolute;
+                        padding: 10px 16px;
+                        border-radius: 20px;
+                        width: max-content;
+                        background-color: white;
+                        color: var(--orange-color);
+                        box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.2);
+                        z-index: 2;
+                    }
+
+                    p span {
+                        position: relative;
+                        top: -1px;
+                    }
+
+                    p:first-of-type {
+                        left: 10px;
+                        bottom: 180px;
+                    }
+
+                    p:nth-of-type(2) {
+                        right: 10px;
+                        bottom: 115px;
+                    }
+
+                    p:last-of-type {
+                        left: 50%;
+                        bottom: 50px;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                /* Card 7 */
+                .item-7 {
+                    background-color: var(--light-blue-color);
+                    grid-row: span 1;
+                    position: relative;
+
+                    /* Oval */
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        border-radius: 50%;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                    }
+
+                    &::before {
+                        width: 350px;
+                        height: 350px;
+                        background-color: #9cc3f7;
+                        top: 50%;
+                        left: 110%;
+                    }
+
+                    &::after {
+                        width: 260px;
+                        height: 300px;
+                        background-color: #abccf8;
+                        top: 50%;
+                        right: -88%;
+                    }
+
+                    /* Tags */
+                    p {
+                        position: absolute;
+                        padding: 12px;
+                        font-size: 0.9rem;
+                        background-color: #fff0e6;
+                        color: var(--light-orange-color);
+                        font-weight: 700;
+                        border: 2px solid var(--light-orange-color);
+                        border-radius: 10px;
+                        z-index: 1;
+                    }
+
+                    p:first-of-type {
+                        top: 15%;
+                        left: 10%;
+
+                        &::before {
+                            content: "34";
+                            position: absolute;
+                            text-align: center;
+                            line-height: 2.6;
+                            color: white;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            font-size: 0.6rem;
+                            font-weight: 400;
+                            top: -35%;
+                            right: 6px;
+                            background-color: var(--light-orange-color);
+                        }
+                    }
+
+                    p:nth-of-type(2) {
+                        top: 42.5%;
+                        left: 30%;
+
+                        &::before {
+                            content: "18";
+                            position: absolute;
+                            text-align: center;
+                            line-height: 2.6;
+                            color: white;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            font-size: 0.6rem;
+                            font-weight: 400;
+                            top: -35%;
+                            right: 6px;
+                            background-color: var(--light-orange-color);
+                        }
+                    }
+
+                    p:last-of-type {
+                        top: 70%;
+                        left: 50%;
+
+                        &::before {
+                            content: "40+";
+                            position: absolute;
+                            text-align: center;
+                            line-height: 2.6;
+                            color: white;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            font-size: 0.6rem;
+                            font-weight: 400;
+                            top: -35%;
+                            right: 6px;
+                            background-color: var(--light-orange-color);
+                        }
+                    }
+
+                    /* Dot */
+                    .dot-direction {
+                        position: absolute;
+                        left: 12%;
+                        bottom: 12%;
+                        width: 42px;
+                        height: 42px;
+                        background-color: #01c415;
+                        border: 10px solid #abedcc;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 12px 12px rgba(1, 196, 21, 0.4);
+                    }
+                }
+
+                /* Card 8 */
+                .item-8 {
+                    background-color: var(--orange-color);
+                    grid-row: span 1;
+                    position: relative;
+
+                    /* Oval */
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 400px;
+                        height: 500px;
+                        border-radius: 50%;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                    }
+
+                    &::before {
+                        background-color: var(--light-orange-color);
+                        top: 90%;
+                        left: 50%;
+                    }
+
+                    &::after {
+                        background-color: #ff8d43;
+                        top: 110%;
+                        left: 50%;
+                    }
+
+                    h2 {
+                        padding: 16px;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    img {
+                        padding-inline: 16px;
+                        width: 100%;
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+
+                /* Card 9 */
+                .item-9 {
+                    background-color: var(--orange-color);
+                    grid-column: span 2;
+                    position: relative;
+
+                    /* Pin map */
+                    img {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        object-fit: cover;
+                    }
+
+                    p {
+                        width: fit-content;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    p img {
+                        width: 24px;
+                    }
+
+                    p:first-of-type {
+                        top: 42%;
+                    }
+
+                    p:last-of-type {
+                        top: 58%;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        padding: 10px;
+                        border-radius: 12px;
+                    }
+
+                    /* Map process */
+                    .map-process {
+                        position: absolute;
+                        bottom: 10%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 60%;
+                        height: 10px;
+                        background-color: white;
+                        border-radius: 10px;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            text-align: right;
+                            width: 40%;
+                            height: inherit;
+                            background-color: #0f8145;
+                            border-radius: inherit;
+                        }
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bento Grid CSS</h1>
+            <div class="wrapper">
+                <div class="grid">
+                    <!-- Card 1 -->
+                    <div class="item-card item-1">
+                        <img src="./img/card-burger.png" alt="card-1" />
+                        <div class="card-1-title">
+                            <h2>Cheese Burger</h2>
+                            <p>$4.99</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="item-card item-2">
+                        <img src="./img/card-2-img.png" alt="card-2" />
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="item-card item-3">
+                        <img
+                            src="./img/card-3-img-noti.png"
+                            alt="notification"
+                        />
+                        <img
+                            src="./img/card-3-img-noti.png"
+                            alt="notification"
+                        />
+                        <img src="./img/card-burger.png" alt="notification" />
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="item-card item-4">
+                        <h2>Special Menu</h2>
+                        <img src="./img/card-menu.png" alt="notification" />
+                        <img src="./img/card-menu.png" alt="notification" />
+                        <img src="./img/card-menu.png" alt="notification" />
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="item-card item-5">
+                        <div class="item-5-title">
+                            <h2>Sales Analytics</h2>
+                            <p>44,500</p>
+                            <span>for all time</span>
+                        </div>
+                        <div class="item-5-chart">
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-1"></div>
+                                <p>Mon</p>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-2"></div>
+                                <p>Tue</p>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-3"></div>
+                                <p>Wed</p>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-4"></div>
+                                <p>Thu</p>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-5"></div>
+                                <p>Fri</p>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-6"></div>
+                                <p>Sat</p>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-col chart-col-7"></div>
+                                <p>Sun</p>
+                            </div>
+                        </div>
+
+                        <!-- Circle -->
+                        <div class="circle"></div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="item-card item-6">
+                        <img src="./img/card-customer.png" alt="customer" />
+                        <p><span>🍔</span> Choose dish</p>
+                        <p><span>🛒</span> Add to cart</p>
+                        <p><span>💵 🛵</span> Pay & Track</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="item-card item-7">
+                        <p>New Orders Today</p>
+                        <p>Table Reservations</p>
+                        <p>Pending Queries</p>
+
+                        <!-- Dot -->
+                        <div class="dot-direction"></div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="item-card item-8">
+                        <h2>Ratings</h2>
+                        <img src="./img/card-ratings.png" alt="ratings" />
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="item-card item-9">
+                        <img src="./img/card-map.png" alt="map" />
+                        <p>
+                            <img src="./img/card-pin-map.png" alt="pin map" />
+                        </p>
+                        <p><span>🕔</span> Arriving in 10 minutes</p>
+                        <div class="map-process"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
