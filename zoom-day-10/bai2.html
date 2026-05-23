@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercise 2</title>
+
+        <style>
+            /* Base */
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Open Sans",
+                    "Helvetica Neue",
+                    sans-serif;
+            }
+
+            .box {
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box .square {
+                width: 400px;
+                height: 400px;
+                position: relative;
+                transform: rotate(-45deg);
+                animation: zoom 1.5s ease-in-out infinite /* hoặc thêm alternate */;
+                
+                
+                /* Heart background */
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 64%;
+                    height: 100%;
+                    border-radius: 200px 200px 0 0;
+                    background-color: pink;
+                    z-index: 1;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 64%;
+                    border-radius: 0 200px 200px 0;
+                    background-color: pink;
+                    z-index: 1;
+                }
+
+                /* Text */
+                p {
+                    position: absolute;
+                    margin: 0;
+                    color: white;
+                    font-size: 3rem;
+                    z-index: 2;
+                    top: 60%;
+                    left: 40%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+
+            /* Animation */
+            @keyframes zoom {
+                0%, 100% {
+                    transform: scale(0.8) rotate(-45deg);
+                }
+
+                50% {
+                    transform: scale(1) rotate(-45deg);
+                }
+
+                /* trường hợp sử dụng alternate */
+                /* from {
+                    transform: scale(0.8) rotate(-45deg);
+                }
+
+                to {
+                    transform: scale(1) rotate(-45deg);
+                } */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1>Animation 2</h1>
+            <div class="square">
+                <p>Katheryne</p>
+            </div>
+        </div>
+    </body>
+</html>
