@@ -85,6 +85,10 @@ const filterValidComments = (comments) => {
 };
 
 console.log(filterValidComments(comments));
+console.log(filterValidComments(comments)[0].id); // 1
+console.log(filterValidComments(comments)[1].id); // 3
+console.log(filterValidComments(comments)[2].id); // 5
+console.log(filterValidComments(comments)[3].id); // 7
 // [comments[0], comments[2], comments[4], comments[6]]
 // id: 1, 3, 5, 7
 
