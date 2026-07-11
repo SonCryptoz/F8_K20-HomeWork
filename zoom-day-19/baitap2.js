@@ -154,7 +154,7 @@ function getCustomerStatistics(customers, products, orders) {
                 id: customer.id,
                 name: customer.name,
                 totalSpent,
-                products: Object.values(productStats).sort( // lấy các values để khớp với đầu ra
+                products: Object.values(productStats).sort( // lấy các values productStats để khớp với đầu ra
                     (a, b) => b.totalSpent - a.totalSpent, // totalSpent giảm dần.
                 ),
             };
