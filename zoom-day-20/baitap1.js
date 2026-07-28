@@ -180,3 +180,5 @@ console.log(lookup);
 // }
 console.log(lookup["A002"]);
 // Output: "Vũ Ngọc B"
+
+// ! Bài tập này bị trừ điểm

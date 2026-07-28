@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercise 3</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div id="product-app">
+            <div class="controls">
+                <input
+                    type="text"
+                    id="search-box"
+                    placeholder="Tìm sản phẩm theo tên..."
+                />
+
+                <select id="category-filter">
+                    <option value="all">Tất cả danh mục</option>
+                    <option value="do-dien-tu">Đồ điện tử</option>
+                    <option value="quan-ao">Quần áo</option>
+                    <option value="sach">Sách</option>
+                </select>
+
+                <button id="sort-price-btn">Sắp xếp theo giá</button>
+            </div>
+
+            <div id="product-list"></div>
+
+            <p id="result-count"></p>
+        </div>
+
+        <script src="./baitap3.js"></script>
+    </body>
+</html>

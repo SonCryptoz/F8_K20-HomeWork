@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    color: #1f2937;
+}
+
+form#register-form {
+    width: min(420px, calc(100vw - 32px));
+    padding: 32px 28px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.16);
+}
+
+form#register-form div {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form#register-form input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 16px;
+    background: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form#register-form input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.16);
+    outline: none;
+}
+
+form#register-form input::placeholder {
+    color: #9ca3af;
+}
+
+.error-msg {
+    min-height: 18px;
+    color: #ef4444;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(120deg, #6366f1 0%, #ec4899 100%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+#submit-btn:hover:enabled {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+.success-msg {
+    position: fixed;
+    top: 20px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #047857;
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    box-shadow: 0 12px 30px rgba(22, 163, 74, 0.08);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.1s ease-in, visibility 0.1s ease-in; 
+}
+
+.success-msg.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#submit-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
