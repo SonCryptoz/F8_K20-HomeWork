@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript DOM Showcase</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="app-shell">
+            <section class="hero">
+                <h1>Todo App, Tabs và Slideshow</h1>
+            </section>
+
+            <section class="dashboard">
+                <!-- Todo App -->
+                <div class="card">
+                    <h2>Todo App</h2>
+                    <form class="todo-form">
+                        <input type="text" placeholder="Thêm việc cần làm..." />
+                        <button type="submit">Thêm</button>
+                    </form>
+                    <p class="required">Vui lòng nhập nội dung cần làm!</p>
+                    <div class="todo-filter">
+                        <button
+                            type="button"
+                            class="filter-btn active"
+                            data-filter="all"
+                        >
+                            Tất cả
+                        </button>
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="active"
+                        >
+                            Chưa hoàn thành
+                        </button>
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="completed"
+                        >
+                            Hoàn thành
+                        </button>
+                    </div>
+                    <ul class="todo-list"></ul>
+
+                    <div class="todo-summary">
+                        <p class="completed-todos"></p>
+                        <button type="button" class="clear-completed-btn">
+                            Xóa tất cả
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="card" id="tabs">
+                    <h2>Tabs</h2>
+                    <div class="tab-head">
+                        <button type="button" class="tab-btn">
+                            HTML
+                        </button>
+                        <button type="button" class="tab-btn">CSS</button>
+                        <button type="button" class="tab-btn">
+                            JavaScript
+                        </button>
+                        <button type="button" class="tab-btn">React</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel">
+                            <article class="article-card">
+                                <h3>HTML</h3>
+                                <p>
+                                    HTML là ngôn ngữ cấu trúc nội dung web. Nó
+                                    giúp bạn tạo tiêu đề, đoạn văn, danh sách,
+                                    ảnh và nút bấm.
+                                </p>
+                                <ul>
+                                    <li>Thẻ heading cho tiêu đề</li>
+                                    <li>Thẻ p cho đoạn văn</li>
+                                    <li>Thẻ img cho hình ảnh</li>
+                                    <li>Thẻ ul/li cho danh sách</li>
+                                </ul>
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuigbziPlSauRQr5mHRH33vLLHBrfAECdruGtIV5oV8qieAmE98OVqgEU&s=10"
+                                    alt="HTML"
+                                />
+                                <pre><code>&lt;h1&gt;Xin chào&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                            </article>
+                        </div>
+                        <div class="tab-panel">
+                            <article class="article-card">
+                                <h3>CSS</h3>
+                                <p>
+                                    CSS dùng để trang trí giao diện, định dạng
+                                    màu sắc, khoảng cách, hình ảnh và bố cục.
+                                </p>
+                                <ul>
+                                    <li>color: màu chữ</li>
+                                    <li>padding: khoảng cách bên trong</li>
+                                    <li>border-radius: bo góc</li>
+                                    <li>display: flex để sắp xếp layout</li>
+                                </ul>
+                                <img
+                                    src="https://files.fullstack.edu.vn/f8-prod/blog_posts/95/613a10241dc73.png"
+                                    alt="CSS"
+                                />
+                                <pre><code>.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}</code></pre>
+                            </article>
+                        </div>
+                        <div class="tab-panel">
+                            <article class="article-card">
+                                <h3>JavaScript</h3>
+                                <p>
+                                    JavaScript giúp web tương tác với người
+                                    dùng, xử lý sự kiện, thay đổi nội dung và
+                                    thêm hiệu ứng.
+                                </p>
+                                <ul>
+                                    <li>Thêm sự kiện click</li>
+                                    <li>Thay đổi DOM</li>
+                                    <li>Hiển thị dữ liệu động</li>
+                                    <li>Kiểm tra điều kiện</li>
+                                </ul>
+                                <img
+                                    src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/175426/Originals/JavaScript-framework-1.jpg"
+                                    alt="JavaScript"
+                                />
+                                <pre><code>const btn = document.querySelector('button');
+btn.addEventListener('click', () =&gt; {
+  console.log('Hello');
+});</code></pre>
+                            </article>
+                        </div>
+                        <div class="tab-panel">
+                            <article class="article-card">
+                                <h3>React</h3>
+                                <p>
+                                    React giúp xây dựng giao diện theo mô hình
+                                    component, dễ tái sử dụng và thích hợp cho
+                                    ứng dụng lớn.
+                                </p>
+                                <ul>
+                                    <li>Component tái sử dụng</li>
+                                    <li>State quản lý dữ liệu</li>
+                                    <li>Props truyền dữ liệu</li>
+                                    <li>JSX mô tả giao diện</li>
+                                </ul>
+                                <img
+                                    src="https://cdn-media.sforum.vn/storage/app/media/HuynhUy/React%20l%C3%A0%20g%C3%ACH%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20chi%20ti%E1%BA%BFt%20cho%20ng%C6%B0%E1%BB%9Di%20m%E1%BB%9Bi%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u/react-la-gi-thumb.jpg"
+                                    alt="React"
+                                />
+                                <pre><code>function App() {
+  return &lt;h1&gt;Hello React&lt;/h1&gt;;
+}</code></pre>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slideshow -->
+                <div class="card">
+                    <div class="slideshow-title">
+                    </div>
+                    <div class="slideshow-shell">
+                        <div class="slides"></div>
+                        <div class="slide-nav">
+                            <button type="button" class="prev">&lt;</button>
+                            <button type="button" class="next">&gt;</button>
+                        </div>
+                        <div class="dots"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="./baitap1.js"></script>
+        <script src="./baitap2.js"></script>
+        <script src="./baitap3.js"></script>
+    </body>
+</html>

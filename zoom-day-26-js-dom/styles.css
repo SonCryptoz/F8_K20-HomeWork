@@ -1,0 +1,509 @@
+/* =========================
+   Base / Global Styles
+========================= */
+:root {
+    --bg: #07111f;
+    --panel: rgba(255, 255, 255, 0.08);
+    --panel-strong: rgba(255, 255, 255, 0.14);
+    --text: #f5f7ff;
+    --muted: #bac4de;
+    --accent: #79c8ff;
+    --accent-2: #8b5cf6;
+    --border: rgba(255, 255, 255, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(121, 200, 255, 0.22),
+            transparent 28%
+        ),
+        linear-gradient(135deg, #07111f 0%, #111d33 100%);
+    padding: 24px;
+}
+
+.app-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero {
+    padding: 28px 32px;
+    border-radius: 24px;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 255, 255, 0.06)
+    );
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* =========================
+   Todo App
+========================= */
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(14px);
+}
+
+.card h2 {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+}
+
+.card .required {
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    visibility: hidden;
+    color: red;
+    opacity: 0;
+    margin-top: 0;
+    transform: translateY(-4px);
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+.card .required.active {
+    max-height: 40px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.todo-form input,
+.todo-list .change-todo {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    padding: 11px 14px;
+    font-size: 0.95rem;
+    outline: none;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.08);
+    transition: border-color 0.3s linear;
+}
+
+.todo-form input {
+    flex: 1;
+}
+
+.todo-form button,
+.filter-btn,
+.tab-btn,
+.slide-nav button {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 14px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    box-shadow: 0 8px 18px rgba(123, 123, 255, 0.25);
+}
+
+.todo-form button:hover,
+.filter-btn:hover,
+.tab-btn:hover,
+.slide-nav button:hover {
+    transform: translateY(-1px);
+}
+
+.todo-filter {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--muted);
+    box-shadow: none;
+}
+
+.filter-btn.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 8px 18px rgba(123, 123, 255, 0.25);
+}
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-empty {
+    padding: 14px;
+    text-align: center;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+}
+
+.todo-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.completed-todos {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.completed-todos span {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.clear-completed-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 9px 14px;
+    background: rgba(255, 99, 132, 0.18);
+    color: #ffd6e0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-completed-btn:hover {
+    background: rgba(255, 99, 132, 0.28);
+    transform: translateY(-1px);
+}
+
+.clear-completed-btn.hidden {
+    display: none;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.08);
+    transition: background-color 0.1s linear;
+}
+
+.todo-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.todo-item {
+    transition: 0.3s;
+}
+
+.todo-item.new {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+.todo-item.remove {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+.todo-item.done span {
+    text-decoration: line-through;
+    color: #9eb2d7;
+}
+
+.todo-item button {
+    border: none;
+    border-radius: 10px;
+    padding: 6px 9px;
+    cursor: pointer;
+    background: rgba(240, 49, 49, 0.801);
+    color: var(--text);
+}
+
+/* =========================
+   Tabs
+========================= */
+.tab-head {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    flex: 1;
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+    color: var(--muted);
+    border-radius: 0px;
+    transition: background 0.1s linear;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(0);
+}
+
+.tab-btn.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 8px 18px rgba(123, 123, 255, 0.25);
+}
+
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: var(--text);
+    width: 100%;
+}
+
+.tab-panel {
+    display: none;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    min-height: 140px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--muted);
+}
+
+.article-card h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.article-card p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.article-card ul {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.8;
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.article-card pre {
+    margin: 0;
+    padding: 12px 14px;
+    background: rgba(10, 14, 23, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow-x: auto;
+    color: #dfeaff;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.article-card code {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* =========================
+   Slideshow
+========================= */
+.slideshow-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slideshow-title p {
+    margin-top: 0;
+}
+
+.slideshow-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.slides {
+    position: relative;
+    width: 1160px;
+    min-height: 240px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.slides .slide-inner {
+    display: flex;
+    transition: translate 0.5s ease-in-out;
+}
+
+.slides .slide-inner .slide-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    height: 500px;
+}
+
+.slides .slide-inner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide {
+    display: none;
+    min-height: 240px;
+    padding: 18px;
+    border-radius: 18px;
+    color: white;
+    background: linear-gradient(135deg, #5b8cff, #8b5cf6 70%, #ff60a8);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.slide p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.slide-nav {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.slide-nav button {
+    pointer-events: auto;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    transition: background 0.1s linear;
+}
+
+.slide-nav button:hover {
+    transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.slide-nav .prev {
+    margin-left: 12px;
+}
+
+.slide-nav .next {
+    margin-right: 12px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot.active {
+    background: #fff;
+    transform: scale(1.15);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 920px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
