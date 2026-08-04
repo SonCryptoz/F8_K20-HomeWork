@@ -1,0 +1,62 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    background: rgba(10, 14, 26, 0.82);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container,
+.nav {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    gap: 1.5rem;
+}
+
+.brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    color: #dfe7ff;
+    text-decoration: none;
+    font-size: 0.96rem;
+    transition: all 0.2s ease;
+}
+
+.btn.active {
+    background: rgba(130, 160, 255, 0.18);
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: rgba(130, 160, 255, 0.18);
+    color: #fff;
+}

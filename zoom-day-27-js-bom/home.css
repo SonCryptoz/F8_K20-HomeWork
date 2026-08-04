@@ -1,0 +1,228 @@
+.info-panel,
+.fingerprint-panel {
+    background: rgba(17, 29, 47, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 24px 48px rgba(8, 17, 32, 0.35);
+    padding: clamp(20px, 3vw, 32px);
+}
+
+.info-panel h1 {
+    margin: 0 0 24px;
+    font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+    color: #f3f8ff;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.desc {
+    margin: 10px 0 30px;
+    color: #f8f8f8;
+}
+
+.fingerprint-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fingerprint-box label {
+    font-weight: 600;
+}
+
+#fingerprint {
+    min-height: 50px;
+    padding: 18px 18px 16px;
+    border-radius: 18px;
+    background: rgba(125, 211, 252, 0.06);
+    border: 1px solid rgba(125, 211, 252, 0.15);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    font-family: Consolas, monospace;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.actions button:hover {
+    opacity: 0.9;
+}
+
+#backBtn {
+    background: #374151;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 126px;
+    padding: 18px 18px 16px;
+    border-radius: 18px;
+    background: rgba(125, 211, 252, 0.06);
+    border: 1px solid rgba(125, 211, 252, 0.15);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(125, 211, 252, 0.35);
+    box-shadow: 0 12px 30px rgba(96, 165, 250, 0.08);
+}
+
+.label {
+    color: #aac2df;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.value {
+    color: #edf4ff;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.value.online {
+    display: flex;
+}
+
+.green {
+    display: block;
+    background-color: rgba(34, 197, 94, 0.1);
+    color: rgb(34 197 94);
+    border: 1px rgb(34 197 94) solid;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.red {
+    display: block;
+    background-color: rgba(239, 68, 68, 0.1);
+    color: rgb(239 68 68);
+    border: 1px rgb(239 68 68) solid;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.value.language .lang-wr {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lang-item {
+    display: inline-block;
+    padding-inline: 10px;
+    border: 1px var(--text) solid;
+    border-radius: 50px;
+}
+
+.ads-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    background: linear-gradient(
+        135deg,
+        rgba(125, 211, 252, 0.12),
+        rgba(96, 165, 250, 0.06)
+    );
+    box-shadow: 0 20px 40px rgba(8, 17, 32, 0.25);
+    margin-bottom: 20px;
+}
+
+.ads-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(8, 17, 32, 0.08),
+        rgba(8, 17, 32, 0.35)
+    );
+    pointer-events: none;
+}
+
+.ads-banner img {
+    display: block;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+    cursor: pointer;
+}
+
+.ads-banner:hover img {
+    transform: scale(1.03);
+    filter: saturate(1.08) contrast(1.05);
+}
+
+#location,
+#browser,
+#os,
+#languages,
+#screen,
+#orientation,
+#screenLocation,
+#online {
+    min-height: 24px;
+}
+
+@media (max-width: 980px) {
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .info-panel,
+    .fingerprint-panel {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .info-item {
+        min-height: 110px;
+        padding: 16px;
+    }
+
+    .value {
+        font-size: 0.96rem;
+    }
+}

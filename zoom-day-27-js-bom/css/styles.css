@@ -1,0 +1,39 @@
+:root {
+    --bg: #081120;
+    --bg-soft: #101b2d;
+    --panel: rgba(16, 27, 45, 0.85);
+    --panel-strong: #12233c;
+    --text: #edf4ff;
+    --muted: #aac2df;
+    --primary: #7dd3fc;
+    --primary-strong: #60a5fa;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 24px 48px rgba(8, 17, 32, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #12233c 0%, var(--bg) 42%);
+    color: var(--text);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main.page-shell {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 96px 0 64px;
+}

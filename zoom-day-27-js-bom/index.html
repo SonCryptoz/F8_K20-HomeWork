@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./home.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="header">
+            <header class="site-header">
+                <nav class="nav container" aria-label="Main navigation">
+                    <a class="brand" href="./">JS BOM</a>
+
+                    <div class="nav__links">
+                        <a class="btn active" href="./">Home</a>
+                        <a class="btn" href="./pages/ads/">Advertisement</a>
+                        <span class="btn">Fingerprint</span>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <main class="page-shell">
+            <section class="panel info-panel">
+                <div class="ads-banner">
+                    <a
+                        href="./pages/ads/?utm_source=nguyen_ngoc_son&utm_campaign=campage_1"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1785714690745-476915e48181?q=80&w=1147&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="ads"
+                        />
+                    </a>
+                </div>
+                <h1>Thông tin thiết bị & môi trường</h1>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Vị trí người dùng</span>
+                        <div class="value" id="location">Đang xác định...</div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Trạng thái online</span>
+                        <div class="value online" id="online">
+                            Đang kiểm tra...
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Tên trình duyệt</span>
+                        <div class="value" id="browser">Đang kiểm tra...</div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Tên hệ điều hành</span>
+                        <div class="value" id="os">Đang kiểm tra...</div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Ngôn ngữ hiện tại</span>
+                        <div class="value language" id="languages">
+                            Đang kiểm tra...
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Kích thước màn hình</span>
+                        <div class="value" id="screen">Đang kiểm tra...</div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Hướng màn hình</span>
+                        <div class="value" id="orientation">
+                            Đang kiểm tra...
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel fingerprint-panel" hidden>
+                <h1>Browser Fingerprint</h1>
+                <p class="desc">
+                    Chuỗi fingerprint được tạo từ các thông tin thiết bị và
+                    trình duyệt.
+                </p>
+
+                <div class="fingerprint-box">
+                    <label>Fingerprint</label>
+
+                    <p id="fingerprint"></p>
+
+                    <div class="actions">
+                        <button id="backBtn">Quay về</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
