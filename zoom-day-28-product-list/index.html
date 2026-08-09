@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Product List</title>
+        
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body>
+        <main class="products-page">
+            <!-- Header -->
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">Products</h1>
+                    <p class="page-description">
+                        Browse our collection of products.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Controls -->
+            <section class="product-controls">
+                <!-- Search -->
+                <div class="search-box">
+
+                    <label for="searchInput" class="sr-only">
+                        Search products
+                    </label>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search products..."
+                    />
+                </div>
+
+                <!-- Category -->
+                <div class="control-group">
+                    <label for="categoryFilter"> Category </label>
+
+                    <select id="categoryFilter">
+                        <option value="all">All categories</option>
+                    </select>
+                </div>
+
+                <!-- Sort -->
+                <div class="control-group">
+                    <label for="sortSelect"> Sort by </label>
+
+                    <select id="sortSelect">
+                        <option value="default">Default</option>
+
+                        <option value="title-asc">Title: A → Z</option>
+
+                        <option value="title-desc">Title: Z → A</option>
+
+                        <option value="price-asc">Price: Low → High</option>
+
+                        <option value="price-desc">Price: High → Low</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Product Grid -->
+            <section class="product-grid" id="productGrid" aria-live="polite">
+                <!-- Loading -->
+                <div class="products-loading">
+                    <span>Loading Products. Please wait.</span>
+                </div>
+                
+                <!-- Sản phẩm hiện ở đây-->
+            </section>
+
+            <!-- Empty State -->
+            <section class="empty-state hidden" id="emptyState">
+                <p>Failed to load products. Please try again.</p>
+            </section>
+            
+            <!-- Empty Search -->
+            <section class="empty-search hidden" id="emptySearch">
+                <p>No products found.</p>
+            </section>
+
+            <!-- Pagination -->
+            <nav
+                class="pagination"
+                id="pagination"
+                aria-label="Product pagination"
+            >
+                <!-- Phân trang hiện ở đây -->
+            </nav>
+        </main>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
