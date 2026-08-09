@@ -133,7 +133,11 @@ const renderProductInfo = (product) => {
         .join("");
 
     // * Render Reviews
-    const date = new Date(product.reviews[0].date).toString().split(" ").slice(0, 5).join(" ");
+    const date = new Date(product.reviews[0].date)
+        .toString()
+        .split(" ")
+        .slice(0, 5)
+        .join(" ");
     reviewsList.innerHTML = product.reviews
         .map((review) => {
             return `
@@ -162,33 +166,34 @@ const renderProductInfo = (product) => {
 
 // * Get product details
 const params = new URLSearchParams(location.search);
+const id = params.get("id");
 
 const fetchProductDetails = async () => {
     try {
         productWrapper.hidden = true;
 
-        const result = await fetch(
-            `https://dummyjson.com/products/${params.get("id")}`,
-        );
+        const result = await fetch(`https://dummyjson.com/products/${id}`);
         const data = await result.json();
+    
         renderProductImages(data);
         renderProductInfo(data);
-    } catch (error) {
-        console.log(error.message);
-    } finally {
+        
         loader.hidden = true;
         productWrapper.hidden = false;
+    } catch (error) {
+        productNotFound.hidden = false;
+        loader.hidden = true;
+        console.log(error.message);
     }
 };
 
-if(params.get("id")) {
+if (id) {
     fetchProductDetails();
 } else {
-    loader.hidden = true
+    loader.hidden = true;
     productNotFound.hidden = false;
     productWrapper.hidden = true;
 }
-
 
 // * Thumbnails click
 thumbnailList.addEventListener("click", (e) => {
