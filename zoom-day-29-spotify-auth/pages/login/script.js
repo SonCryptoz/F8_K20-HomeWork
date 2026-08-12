@@ -47,7 +47,7 @@ loginForm.addEventListener("submit", async (e) => {
         if (response.message === "Login successful") {
             localStorage.setItem("access_token", response.access_token);
             localStorage.setItem("refresh_token", response.refresh_token);
-            location.href = "../../index.html";
+            location.href = "../../";
             return;
         }
 
@@ -65,6 +65,6 @@ loginForm.addEventListener("submit", async (e) => {
 // * Kiểm tra nếu user đăng nhập rồi thì không cho vào trang này
 fetchData(`${BASE_URL}/users/me`).then((data) => {
     if (data.user) {
-        location.href = "../../index.html";
+        location.href = "../../";
     }
 });
