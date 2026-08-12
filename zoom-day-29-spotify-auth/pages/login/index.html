@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Login - Spotify</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style type="text/tailwindcss">
+            @theme {
+                --color-primary: #1ed760;
+            }
+        </style>
+    </head>
+
+    <body class="min-h-screen bg-[#0b0b0b] text-white">
+        <!-- HEADER -->
+
+        <header class="border-b border-white/10 bg-black">
+            <div
+                class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5"
+            >
+                <!-- Logo -->
+
+                <a href="../../index.html" class="flex items-center gap-3">
+                    <div
+                        class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-black"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="26 "
+                            height="26 "
+                            fill="currentColor"
+                            class="bi bi-spotify"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"
+                            />
+                        </svg>
+                    </div>
+
+                    <span class="font-bold"> Spotify </span>
+                </a>
+
+                <!-- Back -->
+
+                <a
+                    href="../../index.html"
+                    class="text-sm text-neutral-400 transition hover:text-white"
+                >
+                    Back to home
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+
+        <main
+            class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-10"
+        >
+            <div class="w-full max-w-md">
+                <!-- LOGIN CARD -->
+
+                <div
+                    class="rounded-2xl border border-white/10 bg-[#181818] p-6 shadow-2xl sm:p-8"
+                >
+                    <!-- Title -->
+
+                    <div class="mb-8 text-center">
+                        <h1 class="text-3xl font-bold">Log in</h1>
+
+                        <p class="mt-2 text-sm text-neutral-500">
+                            Log in to continue listening
+                        </p>
+                    </div>
+
+                    <!-- FORM -->
+
+                    <form class="space-y-5" id="login-form">
+                        <!-- Email -->
+                        <div>
+                            <label
+                                for="email"
+                                class="mb-2 block text-sm font-medium"
+                            >
+                                Email
+                            </label>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                required
+                                class="w-full rounded-lg border border-white/10 bg-black px-4 py-3 text-sm outline-none transition placeholder:text-neutral-600 focus:border-primary"
+                            />
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <div class="mb-2 flex items-center justify-between">
+                                <label
+                                    for="password"
+                                    class="text-sm font-medium"
+                                >
+                                    Password
+                                </label>
+                            </div>
+
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                autocomplete="current-password"
+                                placeholder="Enter your password"
+                                required
+                                class="w-full rounded-lg border border-white/10 bg-black px-4 py-3 text-sm outline-none transition placeholder:text-neutral-600 focus:border-primary"
+                            />
+                        </div>
+
+                        <div
+                            id="login-error"
+                            class="hidden rounded-lg border border-red-500/20 bg-red-500/5 px-4 py-3"
+                        >
+                            <p class="text-sm text-red-400">
+                                Invalid email or password.
+                            </p>
+                        </div>
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            id="login-button"
+                            class="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-bold text-black transition hover:scale-[1.01] hover:bg-[#1fdf64] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:col-span-2"
+                        >
+                            <span id="login-text"> Log in </span>
+
+                            <div
+                                id="login-loading"
+                                role="status"
+                                class="hidden"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6 animate-spin fill-white text-amber-100"
+                                    viewBox="0 0 100 101"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                        fill="currentFill"
+                                    />
+                                </svg>
+
+                                <span class="sr-only"> Loading... </span>
+                            </div>
+                        </button>
+                    </form>
+
+                    <!-- REGISTER -->
+
+                    <div class="mt-8 border-t border-white/10 pt-6 text-center">
+                        <p class="text-sm text-neutral-500">
+                            Don't have an account?
+                        </p>
+
+                        <a
+                            href="../register/"
+                            class="mt-2 inline-block text-sm font-semibold text-white underline-offset-4 hover:underline"
+                        >
+                            Sign up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>

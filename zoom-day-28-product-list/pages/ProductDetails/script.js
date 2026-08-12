@@ -133,13 +133,13 @@ const renderProductInfo = (product) => {
         .join("");
 
     // * Render Reviews
-    const date = new Date(product.reviews[0].date)
-        .toString()
-        .split(" ")
-        .slice(0, 5)
-        .join(" ");
     reviewsList.innerHTML = product.reviews
         .map((review) => {
+            const date = new Date(review.date)
+                .toString()
+                .split(" ")
+                .slice(0, 5)
+                .join(" ");
             return `
                     <article class="review">
                         <div class="review-header">
@@ -174,10 +174,10 @@ const fetchProductDetails = async () => {
 
         const result = await fetch(`https://dummyjson.com/products/${id}`);
         const data = await result.json();
-    
+
         renderProductImages(data);
         renderProductInfo(data);
-        
+
         loader.hidden = true;
         productWrapper.hidden = false;
     } catch (error) {
@@ -197,7 +197,7 @@ if (id) {
 
 // * Thumbnails click
 thumbnailList.addEventListener("click", (e) => {
-    const thumbnail = event.target.closest(".thumbnail");
+    const thumbnail = e.target.closest(".thumbnail");
 
     if (!thumbnail) return;
 

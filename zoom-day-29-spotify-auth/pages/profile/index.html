@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Profile</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style type="text/tailwindcss">
+            @theme {
+                --color-primary: #1ed760;
+            }
+        </style>
+    </head>
+
+    <body class="min-h-screen bg-[#0b0b0b] text-white">
+        <!-- HEADER -->
+
+        <header class="border-b border-white/10 bg-black px-5 py-4">
+            <div class="mx-auto flex max-w-5xl items-center justify-between">
+                <!-- Back -->
+
+                <a
+                    href="../../index.html"
+                    class="text-sm text-neutral-400 transition hover:text-white"
+                >
+                    Back
+                </a>
+
+                <!-- Authenticated user -->
+
+                <div class="flex items-center gap-3">
+                    <button
+                        id="logout-button"
+                        type="button"
+                        class="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-neutral-300 transition hover:border-red-500/30 hover:text-red-400"
+                    >
+                        Log out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+
+        <main id="profile" class="mx-auto max-w-5xl px-5 py-10">
+            <!-- PROFILE -->
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>

@@ -324,6 +324,9 @@ searchInput.addEventListener("input", (e) => {
     clearTimeout(timerId);
 
     timerId = setTimeout(() => {
+        currentCategory = "all"; 
+        currentSort = "default"; 
+        currentPage = 1;
         fetchProducts(e.target.value.trim());
     }, 600);
 });
