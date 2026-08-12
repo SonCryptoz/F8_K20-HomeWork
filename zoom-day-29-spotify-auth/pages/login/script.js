@@ -65,6 +65,6 @@ loginForm.addEventListener("submit", async (e) => {
 // * Kiểm tra nếu user đăng nhập rồi thì không cho vào trang này
 fetchData(`${BASE_URL}/users/me`).then((data) => {
     if (data.user) {
-        location.href = "./index.html";
+        location.href = "../../index.html";
     }
 });

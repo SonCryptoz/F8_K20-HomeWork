@@ -44,7 +44,7 @@ registerForm.addEventListener("submit", async (e) => {
 
             localStorage.setItem("refresh_token", response.refresh_token);
 
-            location.href = "./index.html";
+            location.href = "../../index.html";
             return;
         }
 
