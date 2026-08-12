@@ -474,7 +474,7 @@ const fetchProfile = async () => {
             logout.addEventListener("click", () => {
                 if (confirm("Are you sure to logout?")) {
                     localStorage.clear();
-                    location.href = "/zoom-day-29-spotify-auth/pages/login/";
+                    location.href = "./pages/login/";
                 }
             });
         }

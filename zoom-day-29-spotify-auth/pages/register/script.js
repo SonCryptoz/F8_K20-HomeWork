@@ -44,7 +44,7 @@ registerForm.addEventListener("submit", async (e) => {
 
             localStorage.setItem("refresh_token", response.refresh_token);
 
-            location.href = "/zoom-day-29-spotify-auth/";
+            location.href = "./index.html";
             return;
         }
 

@@ -124,7 +124,7 @@ const checkProfile = async () => {
 
             if (!newToken?.access_token) {
                 localStorage.clear();
-                location.href = "/zoom-day-29-spotify-auth/pages/login";
+                location.href = "../login";
                 return;
             }
 
@@ -134,7 +134,7 @@ const checkProfile = async () => {
         }
         if (!data?.user) {
             localStorage.clear();
-            location.href = "/zoom-day-29-spotify-auth/pages/login";
+            location.href = "../login";
             return;
         }
 
@@ -142,7 +142,7 @@ const checkProfile = async () => {
     } catch (error) {
         console.log(error.message);
         localStorage.clear();
-        location.href = "/zoom-day-29-spotify-auth/pages/login";
+        location.href = "../login";
     }
 };
 
@@ -154,7 +154,7 @@ if (logout) {
     logout.addEventListener("click", () => {
         if (confirm("Are you sure to logout?")) {
             localStorage.clear();
-            location.href = "/zoom-day-29-spotify-auth/pages/login/";
+            location.href = "../login";
         }
     });
 }
