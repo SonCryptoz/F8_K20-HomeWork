@@ -1,16 +1,23 @@
 {
-    "cleanUrls": true,
     "rewrites": [
         {
-            "source": "/login",
+            "source": "/login(.*)",
             "destination": "/src/pages/Login/index.html"
         },
         {
-            "source": "/register",
+            "source": "/register(.*)",
             "destination": "/src/pages/Register/index.html"
         },
         {
-            "source": "/((?!src/).*)",
+            "source": "/src/pages/login(.*)",
+            "destination": "/src/pages/Login/index.html"
+        },
+        {
+            "source": "/src/pages/register(.*)",
+            "destination": "/src/pages/Register/index.html"
+        },
+        {
+            "source": "/:path*",
             "destination": "/index.html"
         }
     ]

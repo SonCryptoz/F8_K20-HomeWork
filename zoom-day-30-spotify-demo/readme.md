@@ -1,8 +1,8 @@
-# Spotify Web Player Clone (F8 - Fullstack Practice)
+# Spotify Web Player Clone (F8 - JavaScript Practice)
 
 > Dự án thực hành mô phỏng giao diện và các chức năng cốt lõi của Spotify Web Player, tập trung vào việc xây dựng ứng dụng Single Page Application (SPA) hoàn toàn bằng Vanilla JavaScript.
 
-- **Live Demo:** [https://your-project-name.vercel.app](https://your-project-name.vercel.app)
+- **Live Demo:** [https://f8-k20-spotify-demo.vercel.app/](https://f8-k20-spotify-demo.vercel.app/)
 
 ---
 

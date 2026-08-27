@@ -102,7 +102,7 @@ export const renderArtistPage = async () => {
 
                     <!-- Shuffle -->
                     <button
-                        class="text-sp-text-subdued cursor-pointer hover:text-white hover:scale-105 active:scale-95 transition-all"
+                        class="text-sp-text-subdued cursor-pointer hover:scale-105 active:scale-95 transition-all"
                         id="artist-shuffle-btn"
                         data-tooltip="Enable shuffle"
                     >
