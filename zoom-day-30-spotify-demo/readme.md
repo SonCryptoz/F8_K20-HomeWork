@@ -2,7 +2,7 @@
 
 > Dự án thực hành mô phỏng giao diện và các chức năng cốt lõi của Spotify Web Player, tập trung vào việc xây dựng ứng dụng Single Page Application (SPA) hoàn toàn bằng Vanilla JavaScript.
 
-- **Live Demo:** [https://f8-k20-spotify-demo.vercel.app/](https://f8-k20-spotify-demo.vercel.app/)
+- **Live Demo:** [https://f8-k20-spotify-demo.vercel.app](https://f8-k20-spotify-demo.vercel.app)
 
 ---
 
@@ -78,10 +78,10 @@ src/
 
 ### Các bước cài đặt:
 
-1. **Clone repository về máy:**
+1. **Tải dự án về máy:**
    ```bash
-   git clone <link-repo-cua-ban>
-   cd zoom-day-30-spotify-demo
+   npx degit SonCryptoz/F8_K20-HomeWork/zoom-day-30-spotify-demo spotify-demo
+   cd spotify-demo
    ```
 
 2. **Cài đặt các gói phụ thuộc:**
