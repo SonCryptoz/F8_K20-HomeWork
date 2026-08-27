@@ -1,0 +1,360 @@
+@import "tailwindcss";
+
+@theme {
+    /* --- Spotify Color Palette --- */
+    --color-sp-bg-base: #1ed760;
+    --color-sp-bg-highlight: #3be477;
+    --color-sp-black: #000000;
+    --color-sp-base: #121212;
+    --color-sp-elevated: #1a1a1a;
+    --color-sp-surface: #181818;
+    --color-sp-highlight: #282828;
+    --color-sp-press: #333333;
+    --color-sp-green: #1db954;
+    --color-sp-green-light: #1ed760;
+    --color-sp-text: #ffffff;
+    --color-sp-text-subdued: #b3b3b3;
+    --color-sp-text-muted: #a7a7a7;
+    --color-sp-border: #292929;
+    --color-sp-search-bg: #242424;
+    --color-sp-search-hover: #2a2a2a;
+    --color-sp-banner-start: #af2896;
+    --color-sp-banner-end: #509bf5;
+
+    /* --- Font Family --- */
+    --font-spotify: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* --- Border Radius --- */
+    --radius-sp-card: 8px;
+    --radius-sp-pill: 500px;
+    --radius-sp-panel: 8px;
+}
+
+html,
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-spotify);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== App Grid Layout ===== */
+/* 3-row grid: header | body(sidebar + main) | player */
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* ===== Custom Scrollbar (Spotify-style) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.5);
+}
+
+/* Thin scrollbar for sidebar */
+.sidebar__library-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* ===== Card Hover Effects ===== */
+/* Play button fade-in on card hover */
+.card__play-btn {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card__play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card background transition */
+.card {
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #282828 !important;
+}
+
+/* ===== Range Input (Progress Bar / Volume) ===== */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: #4d4d4d;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+/* ===== Section "Show all" link ===== */
+.section__show-all:hover {
+    text-decoration: underline;
+}
+
+/* ===== Sidebar Card Hover ===== */
+.sidebar__card {
+    transition: background-color 0.2s ease;
+}
+
+.sidebar__card:hover {
+    background-color: #333333;
+}
+
+/* ===== Auth Button Hover ===== */
+.header__login-btn {
+    transition:
+        transform 0.1s ease,
+        background-color 0.1s ease;
+}
+
+.header__login-btn:hover {
+    transform: scale(1.04);
+    background-color: #f6f6f6;
+}
+
+.header__signup-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ===== Nav Link Hover ===== */
+.header__nav-link:hover {
+    color: #ffffff;
+}
+
+/* ===== Sidebar Create Button ===== */
+.sidebar__create-btn:hover {
+    background-color: #282828;
+}
+
+/* ===== Artist Circular Image ===== */
+.artist-card .card__img {
+    border-radius: 50%;
+}
+
+/* ===== Preview Banner Gradient ===== */
+.player-preview {
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    padding: 10px 16px;
+}
+
+/* ===== Main content scroll ===== */
+.main-view {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-view::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-view::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-view::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: 4px;
+}
+
+/* ===== Cards Slider ===== */
+.section__slider-wrapper {
+    position: relative;
+}
+
+.section__slider-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1f1f1f;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.section__slider-wrapper:hover .section__slider-btn {
+    opacity: 1;
+}
+
+.section__slider-btn:hover {
+    background: #2a2a2a;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.section__slider-btn--prev {
+    left: -10px;
+}
+
+.section__slider-btn--next {
+    right: -10px;
+}
+
+.cards-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+}
+
+.cards-slider > .card {
+    flex: 0 0 calc(100% / 5);
+    max-width: calc(100% / 5);
+}
+
+@media (max-width: 1200px) {
+    .cards-slider > .card {
+        flex-basis: calc(100% / 3);
+        max-width: calc(100% / 3);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-slider > .card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ===== Smooth transitions ===== */
+.nav-icon {
+    transition:
+        color 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.nav-icon:hover {
+    color: #ffffff;
+}
+
+/* ===== Sidebar panel ===== */
+.sidebar {
+    border-radius: 8px;
+    background-color: #121212;
+}
+
+/* ===== Main view panel ===== */
+.main-view {
+    border-radius: 8px;
+    background-color: #121212;
+}
+
+/* ===== Text line clamp ===== */
+.line-clamp-2 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ====== Page Loader ====== */
+#page-loader {
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.page-loader__logo {
+    width: 52px;
+    height: 52px;
+
+    animation: spotify-loader-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes spotify-loader-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+.page-loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ===== Mobile Library Overlay ===== */
+#mobile-library-overlay {
+    -webkit-overflow-scrolling: touch;
+}
+
+#mobile-library-overlay.translate-y-0 {
+    transform: translateY(0);
+}
+
+/* Thin scrollbar for mobile library list */
+#mobile-library-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+#mobile-library-list::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 2px;
+}

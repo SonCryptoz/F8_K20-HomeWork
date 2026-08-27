@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="/favicon-unregist.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Subcribe - Spotify</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/src/styles.css" />
+    </head>
+    <body>
+        <div
+            class="bg-sp-base h-full w-full flex items-center justify-center py-20"
+        >
+            <div
+                class="justify-center w-full max-w-160 flex flex-col items-center"
+            >
+                <div class="mb-6">
+                    <svg
+                        viewBox="0 0 24 24"
+                        class="fill-white"
+                        style="width: 32px; height: 32px"
+                    >
+                        <path
+                            d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+                        />
+                    </svg>
+                </div>
+
+                <h1
+                    class="text-5xl font-extrabold tracking-tighter mb-10 text-center leading-tight"
+                >
+                    Sign up to <br />start listening
+                </h1>
+
+                <!-- Form -->
+                <form class="w-full max-w-2xl" id="register-form">
+                    <div
+                        class="grid grid-cols-1 mx-10 sm:mx-0 md:grid-cols-2 gap-x-6 gap-y-4 mb-4"
+                    >
+                        <!-- Email -->
+                        <div>
+                            <label
+                                for="email"
+                                class="block text-sm font-bold mb-2"
+                                >Email</label
+                            >
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                class="w-full bg-transparent border border-[#727272] rounded-sm px-3 py-3 text-white text-base outline-none hover:border-white focus:border-white transition-colors"
+                            />
+                            <div
+                                id="empty-email"
+                                hidden
+                                class="flex items-center gap-2 mt-2 text-[#eb5262]"
+                            >
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    class="fill-current w-4 h-4 shrink-0"
+                                >
+                                    <path
+                                        d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                                    ></path>
+                                    <path
+                                        d="M7.25 12a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0zM8.75 4v6.5h-1.5V4h1.5z"
+                                    ></path>
+                                </svg>
+                                <span class="text-sm font-medium"
+                                    >Please enter your email address.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <label
+                                for="password"
+                                class="block text-sm font-bold mb-2"
+                                >Password</label
+                            >
+                            <div class="relative">
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    placeholder="Create a password"
+                                    class="w-full bg-transparent border border-[#727272] rounded-sm px-3 py-3 pr-11 text-white text-base outline-none hover:border-white focus:border-white transition-colors"
+                                />
+                                <button
+                                    type="button"
+                                    id="toggle-password"
+                                    tabindex="-1"
+                                    class="absolute right-3 top-1/2 cursor-pointer -translate-y-1/2 text-sp-text-muted hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        id="eye-open"
+                                        viewBox="0 0 24 24"
+                                        class="hidden w-5 h-5 fill-none stroke-current stroke-2"
+                                    >
+                                        <path
+                                            d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"
+                                        ></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    <svg
+                                        id="eye-closed"
+                                        viewBox="0 0 24 24"
+                                        class="w-5 h-5 fill-none stroke-current stroke-2"
+                                    >
+                                        <path
+                                            d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a18.5 18.5 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 7 11 7a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                                        ></path>
+                                        <line
+                                            x1="1"
+                                            y1="1"
+                                            x2="23"
+                                            y2="23"
+                                        ></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                id="empty-password"
+                                hidden
+                                class="flex items-center gap-2 mt-2 text-[#eb5262]"
+                            >
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    class="fill-current w-4 h-4 shrink-0"
+                                >
+                                    <path
+                                        d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                                    ></path>
+                                    <path
+                                        d="M7.25 12a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0zM8.75 4v6.5h-1.5V4h1.5z"
+                                    ></path>
+                                </svg>
+                                <span class="text-sm font-medium"
+                                    >Please enter your password.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Username -->
+                        <div>
+                            <label
+                                for="username"
+                                class="block text-sm font-bold mb-2"
+                                >Username</label
+                            >
+                            <input
+                                id="username"
+                                name="username"
+                                type="text"
+                                autocomplete="username"
+                                placeholder="yourusername"
+                                maxlength="30"
+                                class="w-full bg-transparent border border-[#727272] rounded-sm px-3 py-3 text-white text-base outline-none hover:border-white focus:border-white transition-colors"
+                            />
+                            <div
+                                id="empty-username"
+                                hidden
+                                class="flex items-center gap-2 mt-2 text-[#eb5262]"
+                            >
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    class="fill-current w-4 h-4 shrink-0"
+                                >
+                                    <path
+                                        d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                                    ></path>
+                                    <path
+                                        d="M7.25 12a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0zM8.75 4v6.5h-1.5V4h1.5z"
+                                    ></path>
+                                </svg>
+                                <span class="text-sm font-medium"
+                                    >Please enter a username.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Display Name -->
+                        <div>
+                            <label
+                                for="display-name"
+                                class="block text-sm font-bold mb-2"
+                                >Display name</label
+                            >
+                            <input
+                                id="display-name"
+                                name="displayName"
+                                type="text"
+                                autocomplete="name"
+                                placeholder="How you'll appear to others"
+                                maxlength="50"
+                                class="w-full bg-transparent border border-[#727272] rounded-sm px-3 py-3 text-white text-base outline-none hover:border-white focus:border-white transition-colors"
+                            />
+                            <div
+                                id="empty-display-name"
+                                hidden
+                                class="flex items-center gap-2 mt-2 text-[#eb5262]"
+                            >
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    class="fill-current w-4 h-4 shrink-0"
+                                >
+                                    <path
+                                        d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                                    ></path>
+                                    <path
+                                        d="M7.25 12a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0zM8.75 4v6.5h-1.5V4h1.5z"
+                                    ></path>
+                                </svg>
+                                <span class="text-sm font-medium"
+                                    >Please enter a display name.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="md:col-span-2">
+                            <label
+                                for="country"
+                                class="block text-sm font-bold mb-2"
+                                >Country</label
+                            >
+                            <select
+                                id="country"
+                                name="country"
+                                class="w-full bg-sp-base border border-[#727272] rounded-sm px-3 py-3 text-white text-base outline-none hover:border-white focus:border-white transition-colors appearance-none cursor-pointer"
+                            >
+                                <option value="" disabled selected>
+                                    Select your country
+                                </option>
+                                <option value="VN">Vietnam</option>
+                                <option value="US">United States</option>
+                                <option value="JP">Japan</option>
+                                <option value="KR">South Korea</option>
+                                <option value="GB">United Kingdom</option>
+                            </select>
+                            <div
+                                id="empty-country"
+                                hidden
+                                class="flex items-center gap-2 mt-2 text-[#eb5262]"
+                            >
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    class="fill-current w-4 h-4 shrink-0"
+                                >
+                                    <path
+                                        d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                                    ></path>
+                                    <path
+                                        d="M7.25 12a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0zM8.75 4v6.5h-1.5V4h1.5z"
+                                    ></path>
+                                </svg>
+                                <span class="text-sm font-medium"
+                                    >Please select your country.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Bio -->
+                        <div class="md:col-span-2">
+                            <div class="flex items-center justify-between mb-2">
+                                <label for="bio" class="block text-sm font-bold"
+                                    >Bio</label
+                                >
+                                <span
+                                    id="bio-counter"
+                                    class="text-xs text-sp-text-muted"
+                                    >0/60</span
+                                >
+                            </div>
+                            <textarea
+                                id="bio"
+                                name="bio"
+                                rows="3"
+                                maxlength="60"
+                                placeholder="Tell us a bit about yourself"
+                                class="w-full bg-transparent border border-[#727272] rounded-sm px-3 py-3 text-white text-base outline-none hover:border-white focus:border-white transition-colors resize-none"
+                            ></textarea>
+                            <div
+                                id="empty-bio"
+                                hidden
+                                class="flex items-center gap-2 mt-2 text-[#eb5262]"
+                            >
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    class="fill-current w-4 h-4 shrink-0"
+                                >
+                                    <path
+                                        d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                                    ></path>
+                                    <path
+                                        d="M7.25 12a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0zM8.75 4v6.5h-1.5V4h1.5z"
+                                    ></path>
+                                </svg>
+                                <span class="text-sm font-medium"
+                                    >Please enter your bio.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            id="register-button"
+                            type="submit"
+                            class="w-full col-span-full bg-sp-bg-base hover:scale-104 hover:bg-sp-bg-highlight cursor-pointer text-black font-bold text-base rounded-full py-3.5 transition-all mb-10"
+                        >
+                            <span id="register-text">Next</span>
+    
+                            <div
+                                id="register-loading"
+                                role="status"
+                                hidden
+                                class="flex items-center justify-center"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6 animate-spin fill-white text-amber-100"
+                                    viewBox="0 0 100 101"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                        fill="currentFill"
+                                    />
+                                </svg>
+    
+                                <span class="sr-only"> Loading... </span>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Register Link -->
+                <div class="text-center w-full mt-4">
+                    <p class="text-sp-text-muted text-sm mb-4">
+                        Do you already have an account?
+                    </p>
+                    <a
+                        href="/src/pages/login/"
+                        class="text-white inline-block font-bold text-md hover:scale-105"
+                    >
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="/src/pages/Register/script.js"></script>
+    </body>
+</html>

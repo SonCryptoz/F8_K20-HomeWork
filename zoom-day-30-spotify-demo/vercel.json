@@ -1,0 +1,17 @@
+{
+    "cleanUrls": true,
+    "rewrites": [
+        {
+            "source": "/login",
+            "destination": "/src/pages/Login/index.html"
+        },
+        {
+            "source": "/register",
+            "destination": "/src/pages/Register/index.html"
+        },
+        {
+            "source": "/((?!src/).*)",
+            "destination": "/index.html"
+        }
+    ]
+}
