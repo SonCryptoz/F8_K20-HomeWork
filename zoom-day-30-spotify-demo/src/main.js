@@ -1,4 +1,4 @@
-import { attachTrackLikePopup } from "./components/popup.js";
+import { attachTrackLikePopup, trackState } from "./components/popup.js";
 import { showToast } from "./components/toaster.js";
 import { renderHeaderAuth } from "./layouts/Header/HeaderAuth.js";
 import { getCurrentUser } from "./services/auth.js";
@@ -121,9 +121,9 @@ const initApp = async () => {
 
     // Nếu đã đăng nhập -> khởi tạo các state gắn với riêng user này
     if (user) {
-        // Import động module popup.js chỉ để lấy trackState và init theo user.id
-        // (trackState dùng để cache "bài hát nào đã like / nằm trong playlist nào", namespace theo từng user để tránh lẫn dữ liệu)
-        import("./components/popup.js").then((m) => m.trackState.init(user.id));
+        // Khởi tạo trackState theo user.id (cache "bài hát nào đã like / nằm trong playlist nào", namespace theo từng user)
+        // PHẢI chạy TRƯỚC player.init() để khi player gọi syncUI() thì cache đã sẵn sàng
+        trackState.init(user.id);
         // Khởi tạo player theo user.id (VD: khôi phục bài đang nghe dở, volume đã lưu... riêng cho user này)
         player.init(user.id);
     }
