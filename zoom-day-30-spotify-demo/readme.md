@@ -25,22 +25,22 @@
 
 ## 3. Tính năng chính (Features)
 
-- **Trình phát nhạc (Audio Player Manager):** 
-  - Phát / Dừng bài hát.
-  - Tua bài hát theo thanh tiến trình (Seek bar).
-  - Tăng / Giảm và bật / tắt âm lượng.
-  - Chuyển tiếp / Quay lại bài hát trước đó.
-- **Client-side Routing (SPA):** 
-  - Điều hướng mượt mà giữa các trang (Home, Track, Artist, Album, Playlist, My Playlist, Collection) mà không cần tải lại toàn bộ trang.
-- **Xác thực và phân quyền (Authentication):** 
-  - Lưu và quản lý trạng thái người dùng (Session/Local storage).
-  - Cá nhân hóa giao diện và danh sách yêu thích theo từng tài khoản.
+- **Trình phát nhạc (Audio Player Manager):**
+    - Phát / Dừng bài hát.
+    - Tua bài hát theo thanh tiến trình (Seek bar).
+    - Tăng / Giảm và bật / tắt âm lượng.
+    - Chuyển tiếp / Quay lại bài hát trước đó.
+- **Client-side Routing (SPA):**
+    - Điều hướng mượt mà giữa các trang (Home, Track, Artist, Album, Playlist, My Playlist, Collection) mà không cần tải lại toàn bộ trang.
+- **Xác thực và phân quyền (Authentication):**
+    - Lưu và quản lý trạng thái người dùng (Session/Local storage).
+    - Cá nhân hóa giao diện và danh sách yêu thích theo từng tài khoản.
 - **Trải nghiệm người dùng (UX/UI):**
-  - Skeleton Loading hiển thị tạm thời trong khi tải nội dung từng trang.
-  - Hệ thống thông báo nhanh (Toast Notification).
-  - Tooltip hiển thị chú thích khi tương tác.
-- **Giao diện tương thích (Responsive Design):** 
-  - Tối ưu hiển thị trên cả máy tính (Desktop) và thiết bị di động (hỗ trợ Bottom Navigation).
+    - Skeleton Loading hiển thị tạm thời trong khi tải nội dung từng trang.
+    - Hệ thống thông báo nhanh (Toast Notification).
+    - Tooltip hiển thị chú thích khi tương tác.
+- **Giao diện tương thích (Responsive Design):**
+    - Tối ưu hiển thị trên cả máy tính (Desktop) và thiết bị di động (hỗ trợ Bottom Navigation).
 
 ---
 
@@ -73,28 +73,39 @@ src/
 ## 6. Hướng dẫn cài đặt & Chạy dự án (Getting Started)
 
 ### Yêu cầu môi trường:
+
 - Node.js (phiên bản 18 trở lên)
 - Trình quản lý gói: npm, yarn hoặc pnpm
 
 ### Các bước cài đặt:
 
 1. **Tải dự án về máy:**
-   ```bash
-   npx degit SonCryptoz/F8_K20-HomeWork/zoom-day-30-spotify-demo spotify-demo
-   cd spotify-demo
-   ```
 
-2. **Cài đặt các gói phụ thuộc:**
-   ```bash
-   npm install
-   ```
+    ```bash
+    npx degit SonCryptoz/F8_K20-HomeWork/zoom-day-30-spotify-demo spotify-demo
+    cd spotify-demo
+    ```
 
-3. **Chạy server phát triển (Development):**
-   ```bash
-   npm run dev
-   ```
+2. **Cấu hình môi trường:**
+    Tạo file `.env`
 
-4. **Build mã nguồn cho môi trường Production:**
-   ```bash
-   npm run build
-   ```
+    ```env
+    VITE_API_BASE_URL=https://spotify.f8team.dev/api
+    ```
+
+3. **Cài đặt các gói phụ thuộc:**
+
+    ```bash
+    npm install
+    ```
+
+4. **Chạy server phát triển (Development):**
+
+    ```bash
+    npm run dev
+    ```
+
+5. **Build mã nguồn cho môi trường Production:**
+    ```bash
+    npm run build
+    ```
